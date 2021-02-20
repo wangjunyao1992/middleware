@@ -7,7 +7,7 @@ import org.springframework.boot.builder.SpringApplicationBuilder;
 import org.springframework.boot.web.support.SpringBootServletInitializer;
 
 @SpringBootApplication
-@MapperScan(basePackages = "com.wangjunyao.middleware.server.mapper")
+@MapperScan(basePackages = "com.wangjunyao.middleware.model.mapper")
 public class MainApplication extends SpringBootServletInitializer {
 
     @Override

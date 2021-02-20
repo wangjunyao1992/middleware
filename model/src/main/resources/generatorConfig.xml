@@ -28,7 +28,7 @@
         </javaTypeResolver>
 
         <!-- 生成Model类存放位置 -->
-        <javaModelGenerator targetPackage="com.wangjunyao.middleware.server.entity" targetProject=".\src\main\java">
+        <javaModelGenerator targetPackage="com.wangjunyao.middleware.model.entity" targetProject=".\src\main\java">
             <!-- 是否在当前路径下新加一层schema，eg：false：路径com.oop.user.model，
                                                true：路径com.oop.user.model.[schemaName] -->
             <property name="enableSubPackages" value="false" />
@@ -41,11 +41,23 @@
         </sqlMapGenerator>
 
         <!-- 生成DAO的包名和位置 -->
-        <javaClientGenerator type="XMLMAPPER" targetPackage="com.wangjunyao.middleware.server.mapper"  targetProject=".\src\main\java">
+        <javaClientGenerator type="XMLMAPPER" targetPackage="com.wangjunyao.middleware.model.mapper"  targetProject=".\src\main\java">
             <property name="enableSubPackages" value="false" />
         </javaClientGenerator>
 
-        <table  tableName="item" domainObjectName="Item" schema=""></table>
+        <table  tableName="item" domainObjectName="Item" schema="" enableCountByExample="false" enableUpdateByExample="false" enableDeleteByExample="false" enableSelectByExample="false" selectByExampleQueryId="false">
+            <!-- Mybatis generator 自动生成代码时 ，insert返回主键值 -->
+            <generatedKey column="id" sqlStatement="MySql" identity="true"/>
+        </table>
+        <table  tableName="red_detail" domainObjectName="RedDetail" schema="" enableCountByExample="false" enableUpdateByExample="false" enableDeleteByExample="false" enableSelectByExample="false" selectByExampleQueryId="false">
+            <generatedKey column="id" sqlStatement="MySql" identity="true"/>
+        </table>
+        <table  tableName="red_record" domainObjectName="RedRecord" schema="" enableCountByExample="false" enableUpdateByExample="false" enableDeleteByExample="false" enableSelectByExample="false" selectByExampleQueryId="false">
+            <generatedKey column="id" sqlStatement="MySql" identity="true"/>
+        </table>
+        <table  tableName="red_rob_record" domainObjectName="RedRobRecord" schema="" enableCountByExample="false" enableUpdateByExample="false" enableDeleteByExample="false" enableSelectByExample="false" selectByExampleQueryId="false">
+            <generatedKey column="id" sqlStatement="MySql" identity="true"/>
+        </table>
     </context>
 
 </generatorConfiguration>

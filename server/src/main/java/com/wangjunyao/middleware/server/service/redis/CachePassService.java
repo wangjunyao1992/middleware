@@ -2,8 +2,8 @@ package com.wangjunyao.middleware.server.service.redis;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.google.common.base.Strings;
-import com.wangjunyao.middleware.server.entity.Item;
-import com.wangjunyao.middleware.server.mapper.ItemMapper;
+import com.wangjunyao.middleware.model.entity.Item;
+import com.wangjunyao.middleware.model.mapper.ItemMapper;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
