@@ -1,0 +1,1057 @@
+[2021-02-22 11:21:40.904] boot -  INFO [main] --- SpringBootTestContextBootstrapper:Neither @ContextConfiguration nor @ContextHierarchy found for test class [com.wangjunyao.middleware.server.RabbitmqTest], using SpringBootContextLoader
+[2021-02-22 11:21:40.924] boot -  INFO [main] --- AbstractContextLoader:Could not detect default resource locations for test class [com.wangjunyao.middleware.server.RabbitmqTest]: no resource found for suffixes {-context.xml, Context.groovy}.
+[2021-02-22 11:21:41.411] boot -  INFO [main] --- SpringBootTestContextBootstrapper:Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener, org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener]
+[2021-02-22 11:21:41.526] boot -  INFO [main] --- SpringBootTestContextBootstrapper:Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@612fc6eb, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@1060b431, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener@612679d6, org.springframework.boot.test.autoconfigure.SpringBootDependencyInjectionTestExecutionListener@11758f2a, org.springframework.test.context.support.DirtiesContextTestExecutionListener@e720b71, org.springframework.test.context.transaction.TransactionalTestExecutionListener@1b26f7b2, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@491cc5c9, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener@74ad1f1f, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener@6a1aab78, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener@462d5aee, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener@69b0fd6f, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener@757942a1]
+[2021-02-22 11:21:43.545] boot -  INFO [main] --- RabbitmqTest:Starting RabbitmqTest on 王俊瑶 with PID 10120 (started by wangjunyao in E:\idea-workspace\middleware\server)
+[2021-02-22 11:21:43.545] boot -  INFO [main] --- RabbitmqTest:No active profile set, falling back to default profiles: default
+[2021-02-22 11:21:43.670] boot -  INFO [main] --- GenericWebApplicationContext:Refreshing org.springframework.web.context.support.GenericWebApplicationContext@34a3d150: startup date [Mon Feb 22 11:21:43 CST 2021]; root of context hierarchy
+[2021-02-22 11:21:45.267] boot -  INFO [background-preinit] --- Version:HV000001: Hibernate Validator 5.3.6.Final
+[2021-02-22 11:21:46.447] boot -  INFO [main] --- RepositoryConfigurationDelegate:Multiple Spring Data modules found, entering strict repository configuration mode!
+[2021-02-22 11:21:47.635] boot -  INFO [main] --- PostProcessorRegistrationDelegate$BeanPostProcessorChecker:Bean 'org.springframework.amqp.rabbit.annotation.RabbitBootstrapConfiguration' of type [org.springframework.amqp.rabbit.annotation.RabbitBootstrapConfiguration$$EnhancerBySpringCGLIB$$968db93b] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+[2021-02-22 11:21:47.751] boot -  INFO [main] --- PostProcessorRegistrationDelegate$BeanPostProcessorChecker:Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$d021fb0d] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+[2021-02-22 11:21:52.711] boot -  INFO [main] --- RequestMappingHandlerAdapter:Looking for @ControllerAdvice: org.springframework.web.context.support.GenericWebApplicationContext@34a3d150: startup date [Mon Feb 22 11:21:43 CST 2021]; root of context hierarchy
+[2021-02-22 11:21:52.897] boot -  INFO [main] --- RequestMappingHandlerMapping:Mapped "{[/book/info],methods=[GET]}" onto public com.wangjunyao.middleware.server.entity.Book com.wangjunyao.middleware.server.controller.BookController.info(java.lang.Integer,java.lang.String)
+[2021-02-22 11:21:52.900] boot -  INFO [main] --- RequestMappingHandlerMapping:Mapped "{[/cache/pass/item/info],methods=[GET]}" onto public java.util.Map<java.lang.String, java.lang.Object> com.wangjunyao.middleware.server.controller.redis.CachePassController.getItem(java.lang.String)
+[2021-02-22 11:21:52.902] boot -  INFO [main] --- RequestMappingHandlerMapping:Mapped "{[/red/packet/hand/out],methods=[POST],consumes=[application/json;charset=UTF-8]}" onto public com.wangjunyao.middleware.api.response.BaseResponse com.wangjunyao.middleware.server.controller.redis.RedPacketController.handOut(com.wangjunyao.middleware.server.dto.RedPacketDto,org.springframework.validation.BindingResult)
+[2021-02-22 11:21:52.903] boot -  INFO [main] --- RequestMappingHandlerMapping:Mapped "{[/red/packet/rob],methods=[GET],consumes=[application/json;charset=UTF-8]}" onto public com.wangjunyao.middleware.api.response.BaseResponse com.wangjunyao.middleware.server.controller.redis.RedPacketController.rob(java.lang.Integer,java.lang.String)
+[2021-02-22 11:21:52.913] boot -  INFO [main] --- RequestMappingHandlerMapping:Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+[2021-02-22 11:21:52.914] boot -  INFO [main] --- RequestMappingHandlerMapping:Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+[2021-02-22 11:21:52.998] boot -  INFO [main] --- SimpleUrlHandlerMapping:Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+[2021-02-22 11:21:52.998] boot -  INFO [main] --- SimpleUrlHandlerMapping:Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+[2021-02-22 11:21:53.087] boot -  INFO [main] --- SimpleUrlHandlerMapping:Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+[2021-02-22 11:21:54.103] boot -  INFO [main] --- DefaultLifecycleProcessor:Starting beans in phase 2147483647
+[2021-02-22 11:21:54.131] boot -  INFO [SimpleAsyncTaskExecutor-1] --- CachingConnectionFactory:Attempting to connect to: [127.0.0.1:5672]
+[2021-02-22 11:21:54.399] boot -  INFO [SimpleAsyncTaskExecutor-1] --- CachingConnectionFactory:Created new connection: rabbitConnectionFactory#7c8c7741:0/SimpleConnection@7321c6ca [delegate=amqp://guest@127.0.0.1:5672/, localPort= 59020]
+[2021-02-22 11:22:06.718] boot - ERROR [SimpleAsyncTaskExecutor-1] --- SimpleMessageListenerContainer:Failed to check/redeclare auto-delete queue(s).
+org.springframework.amqp.UncategorizedAmqpException: java.lang.IllegalStateException: Invalid configuration: 'routingKey' must be non-null.
+	at org.springframework.amqp.rabbit.support.RabbitExceptionTranslator.convertRabbitAccessException(RabbitExceptionTranslator.java:83)
+	at org.springframework.amqp.rabbit.connection.RabbitAccessor.convertRabbitAccessException(RabbitAccessor.java:113)
+	at org.springframework.amqp.rabbit.core.RabbitTemplate.doExecute(RabbitTemplate.java:1469)
+	at org.springframework.amqp.rabbit.core.RabbitTemplate.execute(RabbitTemplate.java:1419)
+	at org.springframework.amqp.rabbit.core.RabbitTemplate.execute(RabbitTemplate.java:1395)
+	at org.springframework.amqp.rabbit.core.RabbitAdmin.initialize(RabbitAdmin.java:579)
+	at org.springframework.amqp.rabbit.core.RabbitAdmin$11$1.doWithRetry(RabbitAdmin.java:486)
+	at org.springframework.retry.support.RetryTemplate.doExecute(RetryTemplate.java:287)
+	at org.springframework.retry.support.RetryTemplate.execute(RetryTemplate.java:164)
+	at org.springframework.amqp.rabbit.core.RabbitAdmin$11.onCreate(RabbitAdmin.java:481)
+	at org.springframework.amqp.rabbit.connection.CompositeConnectionListener.onCreate(CompositeConnectionListener.java:33)
+	at org.springframework.amqp.rabbit.connection.CachingConnectionFactory.createConnection(CachingConnectionFactory.java:594)
+	at org.springframework.amqp.rabbit.core.RabbitTemplate.doExecute(RabbitTemplate.java:1438)
+	at org.springframework.amqp.rabbit.core.RabbitTemplate.execute(RabbitTemplate.java:1419)
+	at org.springframework.amqp.rabbit.core.RabbitTemplate.execute(RabbitTemplate.java:1395)
+	at org.springframework.amqp.rabbit.core.RabbitAdmin.getQueueProperties(RabbitAdmin.java:368)
+	at org.springframework.amqp.rabbit.listener.SimpleMessageListenerContainer.redeclareElementsIfNecessary(SimpleMessageListenerContainer.java:1241)
+	at org.springframework.amqp.rabbit.listener.SimpleMessageListenerContainer$AsyncMessageProcessingConsumer.run(SimpleMessageListenerContainer.java:1502)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: java.lang.IllegalStateException: Invalid configuration: 'routingKey' must be non-null.
+	at com.rabbitmq.client.impl.AMQImpl$Queue$Bind.<init>(AMQImpl.java:2201)
+	at com.rabbitmq.client.AMQP$Queue$Bind$Builder.build(AMQP.java:870)
+	at com.rabbitmq.client.impl.ChannelN.queueBind(ChannelN.java:1072)
+	at com.rabbitmq.client.impl.ChannelN.queueBind(ChannelN.java:53)
+	at org.springframework.amqp.rabbit.support.PublisherCallbackChannelImpl.queueBind(PublisherCallbackChannelImpl.java:364)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.amqp.rabbit.connection.CachingConnectionFactory$CachedChannelInvocationHandler.invoke(CachingConnectionFactory.java:1029)
+	at com.sun.proxy.$Proxy95.queueBind(Unknown Source)
+	at org.springframework.amqp.rabbit.core.RabbitAdmin.declareBindings(RabbitAdmin.java:695)
+	at org.springframework.amqp.rabbit.core.RabbitAdmin.access$300(RabbitAdmin.java:72)
+	at org.springframework.amqp.rabbit.core.RabbitAdmin$12.doInRabbit(RabbitAdmin.java:585)
+	at org.springframework.amqp.rabbit.core.RabbitTemplate.doExecute(RabbitTemplate.java:1463)
+	... 16 more
+[2021-02-22 11:22:06.772] boot -  INFO [main] --- RabbitmqTest:Started RabbitmqTest in 24.645 seconds (JVM running for 28.268)
+[2021-02-22 11:22:07.198] boot - ERROR [main] --- BasicPublisher:基本消息模型-生产者-发送消息发生异常：~~~这是一串字符串消息~~~
+org.springframework.amqp.UncategorizedAmqpException: java.lang.IllegalStateException: Invalid configuration: 'routingKey' must be non-null.
+	at com.wangjunyao.middleware.server.rabbitmq.publisher.BasicPublisher.sendMsg(BasicPublisher.java:58)
+	at com.wangjunyao.middleware.server.RabbitmqTest.test1(RabbitmqTest.java:35)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:50)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:47)
+	at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17)
+	at org.springframework.test.context.junit4.statements.RunBeforeTestMethodCallbacks.evaluate(RunBeforeTestMethodCallbacks.java:75)
+	at org.springframework.test.context.junit4.statements.RunAfterTestMethodCallbacks.evaluate(RunAfterTestMethodCallbacks.java:86)
+	at org.springframework.test.context.junit4.statements.SpringRepeat.evaluate(SpringRepeat.java:84)
+	at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:325)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:252)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:94)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)
+	at org.springframework.test.context.junit4.statements.RunBeforeTestClassCallbacks.evaluate(RunBeforeTestClassCallbacks.java:61)
+	at org.springframework.test.context.junit4.statements.RunAfterTestClassCallbacks.evaluate(RunAfterTestClassCallbacks.java:70)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:363)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.run(SpringJUnit4ClassRunner.java:191)
+	at org.junit.runner.JUnitCore.run(JUnitCore.java:137)
+	at com.intellij.junit4.JUnit4IdeaTestRunner.startRunnerWithArgs(JUnit4IdeaTestRunner.java:69)
+	at com.intellij.rt.junit.IdeaTestRunner$Repeater.startRunnerWithArgs(IdeaTestRunner.java:33)
+	at com.intellij.rt.junit.JUnitStarter.prepareStreamsAndStart(JUnitStarter.java:220)
+	at com.intellij.rt.junit.JUnitStarter.main(JUnitStarter.java:53)
+Caused by: java.lang.IllegalStateException: Invalid configuration: 'routingKey' must be non-null.
+	at com.rabbitmq.client.impl.AMQImpl$Basic$Publish.<init>(AMQImpl.java:3197)
+	at com.rabbitmq.client.AMQP$Basic$Publish$Builder.build(AMQP.java:1219)
+	at com.rabbitmq.client.impl.ChannelN.basicPublish(ChannelN.java:701)
+	at com.rabbitmq.client.impl.ChannelN.basicPublish(ChannelN.java:678)
+	at org.springframework.amqp.rabbit.support.PublisherCallbackChannelImpl.basicPublish(PublisherCallbackChannelImpl.java:225)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.amqp.rabbit.connection.CachingConnectionFactory$CachedChannelInvocationHandler.invoke(CachingConnectionFactory.java:1029)
+	at com.sun.proxy.$Proxy95.basicPublish(Unknown Source)
+	at org.springframework.amqp.rabbit.core.RabbitTemplate.doSend(RabbitTemplate.java:1540)
+	at org.springframework.amqp.rabbit.core.RabbitTemplate$3.doInRabbit(RabbitTemplate.java:717)
+	at org.springframework.amqp.rabbit.core.RabbitTemplate.doExecute(RabbitTemplate.java:1463)
+	at org.springframework.amqp.rabbit.core.RabbitTemplate.execute(RabbitTemplate.java:1419)
+	at org.springframework.amqp.rabbit.core.RabbitTemplate.send(RabbitTemplate.java:713)
+	at org.springframework.amqp.rabbit.core.RabbitTemplate.convertAndSend(RabbitTemplate.java:781)
+	at org.springframework.amqp.rabbit.core.RabbitTemplate.convertAndSend(RabbitTemplate.java:753)
+	at com.wangjunyao.middleware.server.rabbitmq.publisher.BasicPublisher.sendMsg(BasicPublisher.java:54)
+	... 29 more
+[2021-02-22 11:22:07.230] boot -  INFO [Thread-2] --- GenericWebApplicationContext:Closing org.springframework.web.context.support.GenericWebApplicationContext@34a3d150: startup date [Mon Feb 22 11:21:43 CST 2021]; root of context hierarchy
+[2021-02-22 11:22:07.235] boot -  INFO [Thread-2] --- DefaultLifecycleProcessor:Stopping beans in phase 2147483647
+[2021-02-22 11:22:07.240] boot -  INFO [Thread-2] --- SimpleMessageListenerContainer:Waiting for workers to finish.
+[2021-02-22 11:22:07.772] boot -  INFO [Thread-2] --- SimpleMessageListenerContainer:Successfully waited for workers to finish.
+[2021-02-22 11:22:07.775] boot -  INFO [Thread-2] --- SimpleMessageListenerContainer:Shutdown ignored - container is not active already
+[2021-02-22 11:22:07.788] boot -  INFO [Thread-2] --- RabbitmqConfig:消息发送成功：correlationData(null), ack(false), cause(clean channel shutdown; protocol method: #method<channel.close>(reply-code=200, reply-text=OK, class-id=0, method-id=0))
+[2021-02-22 11:26:25.816] boot -  INFO [main] --- SpringBootTestContextBootstrapper:Neither @ContextConfiguration nor @ContextHierarchy found for test class [com.wangjunyao.middleware.server.RabbitmqTest], using SpringBootContextLoader
+[2021-02-22 11:26:25.825] boot -  INFO [main] --- AbstractContextLoader:Could not detect default resource locations for test class [com.wangjunyao.middleware.server.RabbitmqTest]: no resource found for suffixes {-context.xml, Context.groovy}.
+[2021-02-22 11:26:26.129] boot -  INFO [main] --- SpringBootTestContextBootstrapper:Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener, org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener]
+[2021-02-22 11:26:26.174] boot -  INFO [main] --- SpringBootTestContextBootstrapper:Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@612fc6eb, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@1060b431, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener@612679d6, org.springframework.boot.test.autoconfigure.SpringBootDependencyInjectionTestExecutionListener@11758f2a, org.springframework.test.context.support.DirtiesContextTestExecutionListener@e720b71, org.springframework.test.context.transaction.TransactionalTestExecutionListener@1b26f7b2, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@491cc5c9, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener@74ad1f1f, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener@6a1aab78, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener@462d5aee, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener@69b0fd6f, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener@757942a1]
+[2021-02-22 11:26:27.201] boot -  INFO [main] --- RabbitmqTest:Starting RabbitmqTest on 王俊瑶 with PID 10552 (started by wangjunyao in E:\idea-workspace\middleware\server)
+[2021-02-22 11:26:27.202] boot -  INFO [main] --- RabbitmqTest:No active profile set, falling back to default profiles: default
+[2021-02-22 11:26:27.314] boot -  INFO [main] --- GenericWebApplicationContext:Refreshing org.springframework.web.context.support.GenericWebApplicationContext@34a3d150: startup date [Mon Feb 22 11:26:27 CST 2021]; root of context hierarchy
+[2021-02-22 11:26:28.672] boot -  INFO [background-preinit] --- Version:HV000001: Hibernate Validator 5.3.6.Final
+[2021-02-22 11:26:29.360] boot -  INFO [main] --- RepositoryConfigurationDelegate:Multiple Spring Data modules found, entering strict repository configuration mode!
+[2021-02-22 11:26:30.441] boot -  INFO [main] --- PostProcessorRegistrationDelegate$BeanPostProcessorChecker:Bean 'org.springframework.amqp.rabbit.annotation.RabbitBootstrapConfiguration' of type [org.springframework.amqp.rabbit.annotation.RabbitBootstrapConfiguration$$EnhancerBySpringCGLIB$$25d7f122] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+[2021-02-22 11:26:30.548] boot -  INFO [main] --- PostProcessorRegistrationDelegate$BeanPostProcessorChecker:Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$5f6c32f4] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+[2021-02-22 11:26:33.521] boot -  INFO [main] --- RequestMappingHandlerAdapter:Looking for @ControllerAdvice: org.springframework.web.context.support.GenericWebApplicationContext@34a3d150: startup date [Mon Feb 22 11:26:27 CST 2021]; root of context hierarchy
+[2021-02-22 11:26:33.653] boot -  INFO [main] --- RequestMappingHandlerMapping:Mapped "{[/book/info],methods=[GET]}" onto public com.wangjunyao.middleware.server.entity.Book com.wangjunyao.middleware.server.controller.BookController.info(java.lang.Integer,java.lang.String)
+[2021-02-22 11:26:33.655] boot -  INFO [main] --- RequestMappingHandlerMapping:Mapped "{[/cache/pass/item/info],methods=[GET]}" onto public java.util.Map<java.lang.String, java.lang.Object> com.wangjunyao.middleware.server.controller.redis.CachePassController.getItem(java.lang.String)
+[2021-02-22 11:26:33.658] boot -  INFO [main] --- RequestMappingHandlerMapping:Mapped "{[/red/packet/rob],methods=[GET],consumes=[application/json;charset=UTF-8]}" onto public com.wangjunyao.middleware.api.response.BaseResponse com.wangjunyao.middleware.server.controller.redis.RedPacketController.rob(java.lang.Integer,java.lang.String)
+[2021-02-22 11:26:33.659] boot -  INFO [main] --- RequestMappingHandlerMapping:Mapped "{[/red/packet/hand/out],methods=[POST],consumes=[application/json;charset=UTF-8]}" onto public com.wangjunyao.middleware.api.response.BaseResponse com.wangjunyao.middleware.server.controller.redis.RedPacketController.handOut(com.wangjunyao.middleware.server.dto.RedPacketDto,org.springframework.validation.BindingResult)
+[2021-02-22 11:26:33.662] boot -  INFO [main] --- RequestMappingHandlerMapping:Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+[2021-02-22 11:26:33.663] boot -  INFO [main] --- RequestMappingHandlerMapping:Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+[2021-02-22 11:26:33.737] boot -  INFO [main] --- SimpleUrlHandlerMapping:Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+[2021-02-22 11:26:33.738] boot -  INFO [main] --- SimpleUrlHandlerMapping:Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+[2021-02-22 11:26:33.821] boot -  INFO [main] --- SimpleUrlHandlerMapping:Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+[2021-02-22 11:26:34.547] boot -  INFO [main] --- DefaultLifecycleProcessor:Starting beans in phase 2147483647
+[2021-02-22 11:26:34.562] boot -  INFO [SimpleAsyncTaskExecutor-1] --- CachingConnectionFactory:Attempting to connect to: [127.0.0.1:5672]
+[2021-02-22 11:26:34.710] boot -  INFO [SimpleAsyncTaskExecutor-1] --- CachingConnectionFactory:Created new connection: rabbitConnectionFactory#5a08ff41:0/SimpleConnection@79306cf [delegate=amqp://guest@127.0.0.1:5672/, localPort= 59166]
+[2021-02-22 11:26:35.185] boot -  INFO [main] --- RabbitmqTest:Started RabbitmqTest in 8.645 seconds (JVM running for 10.627)
+[2021-02-22 11:26:35.361] boot -  INFO [main] --- BasicPublisher:基本消息模型-生产者-发送消息：~~~这是一串字符串消息~~~
+[2021-02-22 11:26:35.371] boot -  INFO [Thread-2] --- GenericWebApplicationContext:Closing org.springframework.web.context.support.GenericWebApplicationContext@34a3d150: startup date [Mon Feb 22 11:26:27 CST 2021]; root of context hierarchy
+[2021-02-22 11:26:35.374] boot -  INFO [Thread-2] --- DefaultLifecycleProcessor:Stopping beans in phase 2147483647
+[2021-02-22 11:26:35.388] boot -  INFO [Thread-2] --- SimpleMessageListenerContainer:Waiting for workers to finish.
+[2021-02-22 11:26:35.395] boot -  WARN [SimpleAsyncTaskExecutor-1] --- Jackson2JsonMessageConverter:Could not convert incoming message with content-type [application/octet-stream], 'json' keyword missing.
+[2021-02-22 11:26:35.488] boot -  INFO [AMQP Connection 127.0.0.1:5672] --- RabbitmqConfig:消息发送成功：correlationData(null), ack(true), cause(null)
+[2021-02-22 11:26:35.548] boot -  INFO [SimpleAsyncTaskExecutor-1] --- BasicConsumer:基本消息模型 - 消费者 - 监听消费到消息：~~~这是一串字符串消息~~~
+[2021-02-22 11:26:35.550] boot -  INFO [Thread-2] --- SimpleMessageListenerContainer:Successfully waited for workers to finish.
+[2021-02-22 11:26:35.561] boot -  INFO [Thread-2] --- SimpleMessageListenerContainer:Shutdown ignored - container is not active already
+[2021-02-22 11:33:07.759] boot -  INFO [main] --- SpringBootTestContextBootstrapper:Neither @ContextConfiguration nor @ContextHierarchy found for test class [com.wangjunyao.middleware.server.RabbitmqTest], using SpringBootContextLoader
+[2021-02-22 11:33:07.768] boot -  INFO [main] --- AbstractContextLoader:Could not detect default resource locations for test class [com.wangjunyao.middleware.server.RabbitmqTest]: no resource found for suffixes {-context.xml, Context.groovy}.
+[2021-02-22 11:33:07.933] boot -  INFO [main] --- SpringBootTestContextBootstrapper:Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener, org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener]
+[2021-02-22 11:33:07.995] boot -  INFO [main] --- SpringBootTestContextBootstrapper:Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@612fc6eb, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@1060b431, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener@612679d6, org.springframework.boot.test.autoconfigure.SpringBootDependencyInjectionTestExecutionListener@11758f2a, org.springframework.test.context.support.DirtiesContextTestExecutionListener@e720b71, org.springframework.test.context.transaction.TransactionalTestExecutionListener@1b26f7b2, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@491cc5c9, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener@74ad1f1f, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener@6a1aab78, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener@462d5aee, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener@69b0fd6f, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener@757942a1]
+[2021-02-22 11:33:08.944] boot -  INFO [main] --- RabbitmqTest:Starting RabbitmqTest on 王俊瑶 with PID 12948 (started by wangjunyao in E:\idea-workspace\middleware\server)
+[2021-02-22 11:33:08.947] boot -  INFO [main] --- RabbitmqTest:No active profile set, falling back to default profiles: default
+[2021-02-22 11:33:09.029] boot -  INFO [main] --- GenericWebApplicationContext:Refreshing org.springframework.web.context.support.GenericWebApplicationContext@34a3d150: startup date [Mon Feb 22 11:33:09 CST 2021]; root of context hierarchy
+[2021-02-22 11:33:10.847] boot -  INFO [background-preinit] --- Version:HV000001: Hibernate Validator 5.3.6.Final
+[2021-02-22 11:33:11.389] boot -  INFO [main] --- RepositoryConfigurationDelegate:Multiple Spring Data modules found, entering strict repository configuration mode!
+[2021-02-22 11:33:12.188] boot -  INFO [main] --- PostProcessorRegistrationDelegate$BeanPostProcessorChecker:Bean 'org.springframework.amqp.rabbit.annotation.RabbitBootstrapConfiguration' of type [org.springframework.amqp.rabbit.annotation.RabbitBootstrapConfiguration$$EnhancerBySpringCGLIB$$a2db03ae] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+[2021-02-22 11:33:12.283] boot -  INFO [main] --- PostProcessorRegistrationDelegate$BeanPostProcessorChecker:Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$dc6f4580] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+[2021-02-22 11:33:15.068] boot -  INFO [main] --- RequestMappingHandlerAdapter:Looking for @ControllerAdvice: org.springframework.web.context.support.GenericWebApplicationContext@34a3d150: startup date [Mon Feb 22 11:33:09 CST 2021]; root of context hierarchy
+[2021-02-22 11:33:15.206] boot -  INFO [main] --- RequestMappingHandlerMapping:Mapped "{[/book/info],methods=[GET]}" onto public com.wangjunyao.middleware.server.entity.Book com.wangjunyao.middleware.server.controller.BookController.info(java.lang.Integer,java.lang.String)
+[2021-02-22 11:33:15.208] boot -  INFO [main] --- RequestMappingHandlerMapping:Mapped "{[/cache/pass/item/info],methods=[GET]}" onto public java.util.Map<java.lang.String, java.lang.Object> com.wangjunyao.middleware.server.controller.redis.CachePassController.getItem(java.lang.String)
+[2021-02-22 11:33:15.211] boot -  INFO [main] --- RequestMappingHandlerMapping:Mapped "{[/red/packet/rob],methods=[GET],consumes=[application/json;charset=UTF-8]}" onto public com.wangjunyao.middleware.api.response.BaseResponse com.wangjunyao.middleware.server.controller.redis.RedPacketController.rob(java.lang.Integer,java.lang.String)
+[2021-02-22 11:33:15.212] boot -  INFO [main] --- RequestMappingHandlerMapping:Mapped "{[/red/packet/hand/out],methods=[POST],consumes=[application/json;charset=UTF-8]}" onto public com.wangjunyao.middleware.api.response.BaseResponse com.wangjunyao.middleware.server.controller.redis.RedPacketController.handOut(com.wangjunyao.middleware.server.dto.RedPacketDto,org.springframework.validation.BindingResult)
+[2021-02-22 11:33:15.217] boot -  INFO [main] --- RequestMappingHandlerMapping:Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+[2021-02-22 11:33:15.219] boot -  INFO [main] --- RequestMappingHandlerMapping:Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+[2021-02-22 11:33:15.326] boot -  INFO [main] --- SimpleUrlHandlerMapping:Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+[2021-02-22 11:33:15.327] boot -  INFO [main] --- SimpleUrlHandlerMapping:Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+[2021-02-22 11:33:15.487] boot -  INFO [main] --- SimpleUrlHandlerMapping:Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+[2021-02-22 11:33:16.500] boot -  INFO [main] --- DefaultLifecycleProcessor:Starting beans in phase 2147483647
+[2021-02-22 11:33:16.540] boot -  INFO [SimpleAsyncTaskExecutor-1] --- CachingConnectionFactory:Attempting to connect to: [127.0.0.1:5672]
+[2021-02-22 11:33:16.781] boot -  INFO [SimpleAsyncTaskExecutor-1] --- CachingConnectionFactory:Created new connection: rabbitConnectionFactory#18c9d02:0/SimpleConnection@5010432c [delegate=amqp://guest@127.0.0.1:5672/, localPort= 59394]
+[2021-02-22 11:33:16.928] boot -  INFO [main] --- RabbitmqTest:Started RabbitmqTest in 8.641 seconds (JVM running for 10.316)
+[2021-02-22 11:33:17.090] boot -  INFO [main] --- BasicPublisher:基本消息模型-生产者-发送消息：~~~这是一串字符串消息~~~
+[2021-02-22 11:33:17.108] boot -  INFO [Thread-2] --- GenericWebApplicationContext:Closing org.springframework.web.context.support.GenericWebApplicationContext@34a3d150: startup date [Mon Feb 22 11:33:09 CST 2021]; root of context hierarchy
+[2021-02-22 11:33:17.110] boot -  INFO [Thread-2] --- DefaultLifecycleProcessor:Stopping beans in phase 2147483647
+[2021-02-22 11:33:17.114] boot -  WARN [SimpleAsyncTaskExecutor-1] --- Jackson2JsonMessageConverter:Could not convert incoming message with content-type [application/octet-stream], 'json' keyword missing.
+[2021-02-22 11:33:17.123] boot -  INFO [SimpleAsyncTaskExecutor-1] --- BasicConsumer:基本消息模型 - 消费者 - 监听消费到消息：~~~这是一串字符串消息~~~
+[2021-02-22 11:33:17.147] boot -  INFO [AMQP Connection 127.0.0.1:5672] --- RabbitmqConfig:消息发送成功：correlationData(null), ack(true), cause(null)
+[2021-02-22 11:33:17.149] boot -  INFO [Thread-2] --- SimpleMessageListenerContainer:Waiting for workers to finish.
+[2021-02-22 11:33:17.152] boot -  INFO [Thread-2] --- SimpleMessageListenerContainer:Successfully waited for workers to finish.
+[2021-02-22 11:33:17.158] boot -  INFO [Thread-2] --- SimpleMessageListenerContainer:Waiting for workers to finish.
+[2021-02-22 11:33:17.925] boot -  INFO [Thread-2] --- SimpleMessageListenerContainer:Successfully waited for workers to finish.
+[2021-02-22 11:33:17.927] boot -  INFO [Thread-2] --- SimpleMessageListenerContainer:Shutdown ignored - container is not active already
+[2021-02-22 11:33:17.927] boot -  INFO [Thread-2] --- SimpleMessageListenerContainer:Shutdown ignored - container is not active already
+[2021-02-22 11:34:17.448] boot -  INFO [main] --- SpringBootTestContextBootstrapper:Neither @ContextConfiguration nor @ContextHierarchy found for test class [com.wangjunyao.middleware.server.RabbitmqTest], using SpringBootContextLoader
+[2021-02-22 11:34:17.457] boot -  INFO [main] --- AbstractContextLoader:Could not detect default resource locations for test class [com.wangjunyao.middleware.server.RabbitmqTest]: no resource found for suffixes {-context.xml, Context.groovy}.
+[2021-02-22 11:34:17.609] boot -  INFO [main] --- SpringBootTestContextBootstrapper:Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener, org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener]
+[2021-02-22 11:34:17.653] boot -  INFO [main] --- SpringBootTestContextBootstrapper:Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@612fc6eb, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@1060b431, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener@612679d6, org.springframework.boot.test.autoconfigure.SpringBootDependencyInjectionTestExecutionListener@11758f2a, org.springframework.test.context.support.DirtiesContextTestExecutionListener@e720b71, org.springframework.test.context.transaction.TransactionalTestExecutionListener@1b26f7b2, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@491cc5c9, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener@74ad1f1f, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener@6a1aab78, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener@462d5aee, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener@69b0fd6f, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener@757942a1]
+[2021-02-22 11:34:18.356] boot -  INFO [main] --- RabbitmqTest:Starting RabbitmqTest on 王俊瑶 with PID 13700 (started by wangjunyao in E:\idea-workspace\middleware\server)
+[2021-02-22 11:34:18.357] boot -  INFO [main] --- RabbitmqTest:No active profile set, falling back to default profiles: default
+[2021-02-22 11:34:18.419] boot -  INFO [main] --- GenericWebApplicationContext:Refreshing org.springframework.web.context.support.GenericWebApplicationContext@34a3d150: startup date [Mon Feb 22 11:34:18 CST 2021]; root of context hierarchy
+[2021-02-22 11:34:19.547] boot -  INFO [background-preinit] --- Version:HV000001: Hibernate Validator 5.3.6.Final
+[2021-02-22 11:34:20.194] boot -  INFO [main] --- RepositoryConfigurationDelegate:Multiple Spring Data modules found, entering strict repository configuration mode!
+[2021-02-22 11:34:21.498] boot -  INFO [main] --- PostProcessorRegistrationDelegate$BeanPostProcessorChecker:Bean 'org.springframework.amqp.rabbit.annotation.RabbitBootstrapConfiguration' of type [org.springframework.amqp.rabbit.annotation.RabbitBootstrapConfiguration$$EnhancerBySpringCGLIB$$a38316ce] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+[2021-02-22 11:34:21.612] boot -  INFO [main] --- PostProcessorRegistrationDelegate$BeanPostProcessorChecker:Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$dd1758a0] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+[2021-02-22 11:34:24.738] boot -  INFO [main] --- RequestMappingHandlerAdapter:Looking for @ControllerAdvice: org.springframework.web.context.support.GenericWebApplicationContext@34a3d150: startup date [Mon Feb 22 11:34:18 CST 2021]; root of context hierarchy
+[2021-02-22 11:34:24.886] boot -  INFO [main] --- RequestMappingHandlerMapping:Mapped "{[/book/info],methods=[GET]}" onto public com.wangjunyao.middleware.server.entity.Book com.wangjunyao.middleware.server.controller.BookController.info(java.lang.Integer,java.lang.String)
+[2021-02-22 11:34:24.890] boot -  INFO [main] --- RequestMappingHandlerMapping:Mapped "{[/cache/pass/item/info],methods=[GET]}" onto public java.util.Map<java.lang.String, java.lang.Object> com.wangjunyao.middleware.server.controller.redis.CachePassController.getItem(java.lang.String)
+[2021-02-22 11:34:24.895] boot -  INFO [main] --- RequestMappingHandlerMapping:Mapped "{[/red/packet/rob],methods=[GET],consumes=[application/json;charset=UTF-8]}" onto public com.wangjunyao.middleware.api.response.BaseResponse com.wangjunyao.middleware.server.controller.redis.RedPacketController.rob(java.lang.Integer,java.lang.String)
+[2021-02-22 11:34:24.896] boot -  INFO [main] --- RequestMappingHandlerMapping:Mapped "{[/red/packet/hand/out],methods=[POST],consumes=[application/json;charset=UTF-8]}" onto public com.wangjunyao.middleware.api.response.BaseResponse com.wangjunyao.middleware.server.controller.redis.RedPacketController.handOut(com.wangjunyao.middleware.server.dto.RedPacketDto,org.springframework.validation.BindingResult)
+[2021-02-22 11:34:24.902] boot -  INFO [main] --- RequestMappingHandlerMapping:Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+[2021-02-22 11:34:24.904] boot -  INFO [main] --- RequestMappingHandlerMapping:Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+[2021-02-22 11:34:25.026] boot -  INFO [main] --- SimpleUrlHandlerMapping:Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+[2021-02-22 11:34:25.027] boot -  INFO [main] --- SimpleUrlHandlerMapping:Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+[2021-02-22 11:34:25.137] boot -  INFO [main] --- SimpleUrlHandlerMapping:Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+[2021-02-22 11:34:25.940] boot -  INFO [main] --- DefaultLifecycleProcessor:Starting beans in phase 2147483647
+[2021-02-22 11:34:25.954] boot -  INFO [SimpleAsyncTaskExecutor-1] --- CachingConnectionFactory:Attempting to connect to: [127.0.0.1:5672]
+[2021-02-22 11:34:26.075] boot -  INFO [SimpleAsyncTaskExecutor-1] --- CachingConnectionFactory:Created new connection: rabbitConnectionFactory#6191550:0/SimpleConnection@6581a97e [delegate=amqp://guest@127.0.0.1:5672/, localPort= 59430]
+[2021-02-22 11:34:26.184] boot -  INFO [main] --- RabbitmqTest:Started RabbitmqTest in 8.311 seconds (JVM running for 9.672)
+[2021-02-22 11:34:26.289] boot -  INFO [main] --- BasicPublisher:基本消息模型-生产者-发送消息：~~~这是一串字符串消息~~~
+[2021-02-22 11:34:26.299] boot -  WARN [SimpleAsyncTaskExecutor-1] --- Jackson2JsonMessageConverter:Could not convert incoming message with content-type [application/octet-stream], 'json' keyword missing.
+[2021-02-22 11:34:26.303] boot -  INFO [Thread-2] --- GenericWebApplicationContext:Closing org.springframework.web.context.support.GenericWebApplicationContext@34a3d150: startup date [Mon Feb 22 11:34:18 CST 2021]; root of context hierarchy
+[2021-02-22 11:34:26.306] boot -  INFO [Thread-2] --- DefaultLifecycleProcessor:Stopping beans in phase 2147483647
+[2021-02-22 11:34:26.314] boot -  INFO [SimpleAsyncTaskExecutor-1] --- BasicConsumer:基本消息模型 - 消费者 - 监听消费到消息 - 1：~~~这是一串字符串消息~~~
+[2021-02-22 11:34:26.616] boot -  INFO [AMQP Connection 127.0.0.1:5672] --- RabbitmqConfig:消息发送成功：correlationData(null), ack(true), cause(null)
+[2021-02-22 11:34:26.618] boot -  INFO [Thread-2] --- SimpleMessageListenerContainer:Waiting for workers to finish.
+[2021-02-22 11:34:26.621] boot -  INFO [Thread-2] --- SimpleMessageListenerContainer:Successfully waited for workers to finish.
+[2021-02-22 11:34:26.632] boot -  INFO [Thread-2] --- SimpleMessageListenerContainer:Waiting for workers to finish.
+[2021-02-22 11:34:27.173] boot -  INFO [Thread-2] --- SimpleMessageListenerContainer:Successfully waited for workers to finish.
+[2021-02-22 11:34:27.175] boot -  INFO [Thread-2] --- SimpleMessageListenerContainer:Shutdown ignored - container is not active already
+[2021-02-22 11:34:27.175] boot -  INFO [Thread-2] --- SimpleMessageListenerContainer:Shutdown ignored - container is not active already
+[2021-02-22 13:20:20.752] boot -  INFO [main] --- SpringBootTestContextBootstrapper:Neither @ContextConfiguration nor @ContextHierarchy found for test class [com.wangjunyao.middleware.server.RabbitmqTest], using SpringBootContextLoader
+[2021-02-22 13:20:20.762] boot -  INFO [main] --- AbstractContextLoader:Could not detect default resource locations for test class [com.wangjunyao.middleware.server.RabbitmqTest]: no resource found for suffixes {-context.xml, Context.groovy}.
+[2021-02-22 13:20:20.954] boot -  INFO [main] --- SpringBootTestContextBootstrapper:Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener, org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener]
+[2021-02-22 13:20:21.005] boot -  INFO [main] --- SpringBootTestContextBootstrapper:Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@612fc6eb, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@1060b431, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener@612679d6, org.springframework.boot.test.autoconfigure.SpringBootDependencyInjectionTestExecutionListener@11758f2a, org.springframework.test.context.support.DirtiesContextTestExecutionListener@e720b71, org.springframework.test.context.transaction.TransactionalTestExecutionListener@1b26f7b2, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@491cc5c9, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener@74ad1f1f, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener@6a1aab78, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener@462d5aee, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener@69b0fd6f, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener@757942a1]
+[2021-02-22 13:20:21.984] boot -  INFO [main] --- RabbitmqTest:Starting RabbitmqTest on 王俊瑶 with PID 7848 (started by wangjunyao in E:\idea-workspace\middleware\server)
+[2021-02-22 13:20:21.985] boot -  INFO [main] --- RabbitmqTest:No active profile set, falling back to default profiles: default
+[2021-02-22 13:20:22.101] boot -  INFO [main] --- GenericWebApplicationContext:Refreshing org.springframework.web.context.support.GenericWebApplicationContext@34a3d150: startup date [Mon Feb 22 13:20:22 CST 2021]; root of context hierarchy
+[2021-02-22 13:20:23.892] boot -  INFO [background-preinit] --- Version:HV000001: Hibernate Validator 5.3.6.Final
+[2021-02-22 13:20:24.455] boot -  INFO [main] --- RepositoryConfigurationDelegate:Multiple Spring Data modules found, entering strict repository configuration mode!
+[2021-02-22 13:20:25.829] boot -  INFO [main] --- PostProcessorRegistrationDelegate$BeanPostProcessorChecker:Bean 'org.springframework.amqp.rabbit.annotation.RabbitBootstrapConfiguration' of type [org.springframework.amqp.rabbit.annotation.RabbitBootstrapConfiguration$$EnhancerBySpringCGLIB$$99f31e2e] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+[2021-02-22 13:20:26.029] boot -  INFO [main] --- PostProcessorRegistrationDelegate$BeanPostProcessorChecker:Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$d3876000] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+[2021-02-22 13:20:29.138] boot -  INFO [main] --- RequestMappingHandlerAdapter:Looking for @ControllerAdvice: org.springframework.web.context.support.GenericWebApplicationContext@34a3d150: startup date [Mon Feb 22 13:20:22 CST 2021]; root of context hierarchy
+[2021-02-22 13:20:29.273] boot -  INFO [main] --- RequestMappingHandlerMapping:Mapped "{[/book/info],methods=[GET]}" onto public com.wangjunyao.middleware.server.entity.Book com.wangjunyao.middleware.server.controller.BookController.info(java.lang.Integer,java.lang.String)
+[2021-02-22 13:20:29.276] boot -  INFO [main] --- RequestMappingHandlerMapping:Mapped "{[/cache/pass/item/info],methods=[GET]}" onto public java.util.Map<java.lang.String, java.lang.Object> com.wangjunyao.middleware.server.controller.redis.CachePassController.getItem(java.lang.String)
+[2021-02-22 13:20:29.279] boot -  INFO [main] --- RequestMappingHandlerMapping:Mapped "{[/red/packet/hand/out],methods=[POST],consumes=[application/json;charset=UTF-8]}" onto public com.wangjunyao.middleware.api.response.BaseResponse com.wangjunyao.middleware.server.controller.redis.RedPacketController.handOut(com.wangjunyao.middleware.server.dto.RedPacketDto,org.springframework.validation.BindingResult)
+[2021-02-22 13:20:29.280] boot -  INFO [main] --- RequestMappingHandlerMapping:Mapped "{[/red/packet/rob],methods=[GET],consumes=[application/json;charset=UTF-8]}" onto public com.wangjunyao.middleware.api.response.BaseResponse com.wangjunyao.middleware.server.controller.redis.RedPacketController.rob(java.lang.Integer,java.lang.String)
+[2021-02-22 13:20:29.283] boot -  INFO [main] --- RequestMappingHandlerMapping:Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+[2021-02-22 13:20:29.284] boot -  INFO [main] --- RequestMappingHandlerMapping:Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+[2021-02-22 13:20:29.361] boot -  INFO [main] --- SimpleUrlHandlerMapping:Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+[2021-02-22 13:20:29.361] boot -  INFO [main] --- SimpleUrlHandlerMapping:Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+[2021-02-22 13:20:29.455] boot -  INFO [main] --- SimpleUrlHandlerMapping:Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+[2021-02-22 13:20:30.433] boot -  INFO [main] --- DefaultLifecycleProcessor:Starting beans in phase 2147483647
+[2021-02-22 13:20:30.450] boot -  INFO [SimpleAsyncTaskExecutor-1] --- CachingConnectionFactory:Attempting to connect to: [127.0.0.1:5672]
+[2021-02-22 13:20:30.614] boot -  INFO [SimpleAsyncTaskExecutor-1] --- CachingConnectionFactory:Created new connection: rabbitConnectionFactory#45efb99b:0/SimpleConnection@2bc411 [delegate=amqp://guest@127.0.0.1:5672/, localPort= 60661]
+[2021-02-22 13:20:31.141] boot -  INFO [main] --- RabbitmqTest:Started RabbitmqTest in 9.873 seconds (JVM running for 11.586)
+[2021-02-22 13:20:31.408] boot -  INFO [main] --- BasicPublisher:基本消息模型 - 生产者 - 发送对象类型的消息：Person(id=1, age=29, name=大剩, userName=debug, address=陕西·宝鸡)
+[2021-02-22 13:20:31.425] boot -  INFO [Thread-2] --- GenericWebApplicationContext:Closing org.springframework.web.context.support.GenericWebApplicationContext@34a3d150: startup date [Mon Feb 22 13:20:22 CST 2021]; root of context hierarchy
+[2021-02-22 13:20:31.430] boot -  INFO [Thread-2] --- DefaultLifecycleProcessor:Stopping beans in phase 2147483647
+[2021-02-22 13:20:31.440] boot -  INFO [Thread-2] --- SimpleMessageListenerContainer:Waiting for workers to finish.
+[2021-02-22 13:20:31.481] boot -  INFO [AMQP Connection 127.0.0.1:5672] --- RabbitmqConfig:消息发送成功：correlationData(null), ack(true), cause(null)
+[2021-02-22 13:20:31.591] boot -  INFO [SimpleAsyncTaskExecutor-1] --- BasicConsumer:基本消息模型 - 监听消费处理对象信息 - 消费者 - 监听消费消息 - 1：Person(id=1, age=29, name=大剩, userName=debug, address=陕西·宝鸡)
+[2021-02-22 13:20:32.117] boot -  INFO [Thread-2] --- SimpleMessageListenerContainer:Successfully waited for workers to finish.
+[2021-02-22 13:20:32.120] boot -  INFO [Thread-2] --- SimpleMessageListenerContainer:Waiting for workers to finish.
+[2021-02-22 13:20:32.602] boot -  INFO [Thread-2] --- SimpleMessageListenerContainer:Successfully waited for workers to finish.
+[2021-02-22 13:20:32.603] boot -  INFO [Thread-2] --- SimpleMessageListenerContainer:Shutdown ignored - container is not active already
+[2021-02-22 13:20:32.604] boot -  INFO [Thread-2] --- SimpleMessageListenerContainer:Shutdown ignored - container is not active already
+[2021-02-22 14:52:54.291] boot -  INFO [main] --- SpringBootTestContextBootstrapper:Neither @ContextConfiguration nor @ContextHierarchy found for test class [com.wangjunyao.middleware.server.RabbitmqTest], using SpringBootContextLoader
+[2021-02-22 14:52:54.373] boot -  INFO [main] --- AbstractContextLoader:Could not detect default resource locations for test class [com.wangjunyao.middleware.server.RabbitmqTest]: no resource found for suffixes {-context.xml, Context.groovy}.
+[2021-02-22 14:52:54.581] boot -  INFO [main] --- SpringBootTestContextBootstrapper:Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener, org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener]
+[2021-02-22 14:52:54.651] boot -  INFO [main] --- SpringBootTestContextBootstrapper:Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@1060b431, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@612679d6, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener@11758f2a, org.springframework.boot.test.autoconfigure.SpringBootDependencyInjectionTestExecutionListener@e720b71, org.springframework.test.context.support.DirtiesContextTestExecutionListener@1b26f7b2, org.springframework.test.context.transaction.TransactionalTestExecutionListener@491cc5c9, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@74ad1f1f, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener@6a1aab78, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener@462d5aee, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener@69b0fd6f, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener@757942a1, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener@4a87761d]
+[2021-02-22 14:52:55.745] boot -  INFO [main] --- RabbitmqTest:Starting RabbitmqTest on 王俊瑶 with PID 11596 (started by wangjunyao in E:\idea-workspace\middleware\server)
+[2021-02-22 14:52:55.745] boot -  INFO [main] --- RabbitmqTest:No active profile set, falling back to default profiles: default
+[2021-02-22 14:52:55.884] boot -  INFO [main] --- GenericWebApplicationContext:Refreshing org.springframework.web.context.support.GenericWebApplicationContext@2a4fb17b: startup date [Mon Feb 22 14:52:55 CST 2021]; root of context hierarchy
+[2021-02-22 14:52:56.799] boot -  INFO [background-preinit] --- Version:HV000001: Hibernate Validator 5.3.6.Final
+[2021-02-22 14:52:58.987] boot -  INFO [main] --- RepositoryConfigurationDelegate:Multiple Spring Data modules found, entering strict repository configuration mode!
+[2021-02-22 14:53:00.281] boot -  INFO [main] --- PostProcessorRegistrationDelegate$BeanPostProcessorChecker:Bean 'org.springframework.amqp.rabbit.annotation.RabbitBootstrapConfiguration' of type [org.springframework.amqp.rabbit.annotation.RabbitBootstrapConfiguration$$EnhancerBySpringCGLIB$$36ff42a0] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+[2021-02-22 14:53:00.388] boot -  INFO [main] --- PostProcessorRegistrationDelegate$BeanPostProcessorChecker:Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$70938472] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+[2021-02-22 14:53:05.401] boot -  INFO [main] --- RequestMappingHandlerAdapter:Looking for @ControllerAdvice: org.springframework.web.context.support.GenericWebApplicationContext@2a4fb17b: startup date [Mon Feb 22 14:52:55 CST 2021]; root of context hierarchy
+[2021-02-22 14:53:05.667] boot -  INFO [main] --- RequestMappingHandlerMapping:Mapped "{[/book/info],methods=[GET]}" onto public com.wangjunyao.middleware.server.entity.Book com.wangjunyao.middleware.server.controller.BookController.info(java.lang.Integer,java.lang.String)
+[2021-02-22 14:53:05.672] boot -  INFO [main] --- RequestMappingHandlerMapping:Mapped "{[/cache/pass/item/info],methods=[GET]}" onto public java.util.Map<java.lang.String, java.lang.Object> com.wangjunyao.middleware.server.controller.redis.CachePassController.getItem(java.lang.String)
+[2021-02-22 14:53:05.675] boot -  INFO [main] --- RequestMappingHandlerMapping:Mapped "{[/red/packet/rob],methods=[GET],consumes=[application/json;charset=UTF-8]}" onto public com.wangjunyao.middleware.api.response.BaseResponse com.wangjunyao.middleware.server.controller.redis.RedPacketController.rob(java.lang.Integer,java.lang.String)
+[2021-02-22 14:53:05.678] boot -  INFO [main] --- RequestMappingHandlerMapping:Mapped "{[/red/packet/hand/out],methods=[POST],consumes=[application/json;charset=UTF-8]}" onto public com.wangjunyao.middleware.api.response.BaseResponse com.wangjunyao.middleware.server.controller.redis.RedPacketController.handOut(com.wangjunyao.middleware.server.dto.RedPacketDto,org.springframework.validation.BindingResult)
+[2021-02-22 14:53:05.687] boot -  INFO [main] --- RequestMappingHandlerMapping:Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+[2021-02-22 14:53:05.690] boot -  INFO [main] --- RequestMappingHandlerMapping:Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+[2021-02-22 14:53:05.801] boot -  INFO [main] --- SimpleUrlHandlerMapping:Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+[2021-02-22 14:53:05.802] boot -  INFO [main] --- SimpleUrlHandlerMapping:Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+[2021-02-22 14:53:06.007] boot -  INFO [main] --- SimpleUrlHandlerMapping:Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+[2021-02-22 14:53:07.052] boot -  INFO [main] --- DefaultLifecycleProcessor:Starting beans in phase 2147483647
+[2021-02-22 14:53:07.067] boot -  INFO [SimpleAsyncTaskExecutor-1] --- CachingConnectionFactory:Attempting to connect to: [127.0.0.1:5672]
+[2021-02-22 14:53:07.190] boot -  INFO [SimpleAsyncTaskExecutor-1] --- CachingConnectionFactory:Created new connection: rabbitConnectionFactory#6d4d7ea5:0/SimpleConnection@68f6427 [delegate=amqp://guest@127.0.0.1:5672/, localPort= 61471]
+[2021-02-22 14:53:08.087] boot -  WARN [SimpleAsyncTaskExecutor-1] --- BlockingQueueConsumer:Failed to declare queue: local.middleware.mq.fanout.two.queue
+[2021-02-22 14:53:08.088] boot -  WARN [SimpleAsyncTaskExecutor-1] --- BlockingQueueConsumer:Queue declaration failed; retries left=3
+org.springframework.amqp.rabbit.listener.BlockingQueueConsumer$DeclarationException: Failed to declare queue(s):[local.middleware.mq.fanout.two.queue]
+	at org.springframework.amqp.rabbit.listener.BlockingQueueConsumer.attemptPassiveDeclarations(BlockingQueueConsumer.java:706)
+	at org.springframework.amqp.rabbit.listener.BlockingQueueConsumer.start(BlockingQueueConsumer.java:596)
+	at org.springframework.amqp.rabbit.listener.SimpleMessageListenerContainer$AsyncMessageProcessingConsumer.run(SimpleMessageListenerContainer.java:1504)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: java.io.IOException
+	at com.rabbitmq.client.impl.AMQChannel.wrap(AMQChannel.java:124)
+	at com.rabbitmq.client.impl.AMQChannel.wrap(AMQChannel.java:120)
+	at com.rabbitmq.client.impl.AMQChannel.exnWrappingRpc(AMQChannel.java:142)
+	at com.rabbitmq.client.impl.ChannelN.queueDeclarePassive(ChannelN.java:1002)
+	at com.rabbitmq.client.impl.ChannelN.queueDeclarePassive(ChannelN.java:53)
+	at org.springframework.amqp.rabbit.support.PublisherCallbackChannelImpl.queueDeclarePassive(PublisherCallbackChannelImpl.java:339)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.amqp.rabbit.connection.CachingConnectionFactory$CachedChannelInvocationHandler.invoke(CachingConnectionFactory.java:1029)
+	at com.sun.proxy.$Proxy95.queueDeclarePassive(Unknown Source)
+	at org.springframework.amqp.rabbit.listener.BlockingQueueConsumer.attemptPassiveDeclarations(BlockingQueueConsumer.java:685)
+	... 3 more
+Caused by: com.rabbitmq.client.ShutdownSignalException: channel error; protocol method: #method<channel.close>(reply-code=404, reply-text=NOT_FOUND - no queue 'local.middleware.mq.fanout.two.queue' in vhost '/', class-id=50, method-id=10)
+	at com.rabbitmq.utility.ValueOrException.getValue(ValueOrException.java:66)
+	at com.rabbitmq.utility.BlockingValueOrException.uninterruptibleGetValue(BlockingValueOrException.java:36)
+	at com.rabbitmq.client.impl.AMQChannel$BlockingRpcContinuation.getReply(AMQChannel.java:443)
+	at com.rabbitmq.client.impl.AMQChannel.privateRpc(AMQChannel.java:263)
+	at com.rabbitmq.client.impl.AMQChannel.exnWrappingRpc(AMQChannel.java:136)
+	... 13 more
+Caused by: com.rabbitmq.client.ShutdownSignalException: channel error; protocol method: #method<channel.close>(reply-code=404, reply-text=NOT_FOUND - no queue 'local.middleware.mq.fanout.two.queue' in vhost '/', class-id=50, method-id=10)
+	at com.rabbitmq.client.impl.ChannelN.asyncShutdown(ChannelN.java:515)
+	at com.rabbitmq.client.impl.ChannelN.processAsync(ChannelN.java:340)
+	at com.rabbitmq.client.impl.AMQChannel.handleCompleteInboundCommand(AMQChannel.java:162)
+	at com.rabbitmq.client.impl.AMQChannel.handleFrame(AMQChannel.java:109)
+	at com.rabbitmq.client.impl.AMQConnection.readFrame(AMQConnection.java:676)
+	at com.rabbitmq.client.impl.AMQConnection.access$300(AMQConnection.java:48)
+	at com.rabbitmq.client.impl.AMQConnection$MainLoop.run(AMQConnection.java:603)
+	... 1 more
+[2021-02-22 14:53:13.097] boot -  WARN [SimpleAsyncTaskExecutor-1] --- BlockingQueueConsumer:Failed to declare queue: local.middleware.mq.fanout.two.queue
+[2021-02-22 14:53:13.097] boot -  WARN [SimpleAsyncTaskExecutor-1] --- BlockingQueueConsumer:Queue declaration failed; retries left=2
+org.springframework.amqp.rabbit.listener.BlockingQueueConsumer$DeclarationException: Failed to declare queue(s):[local.middleware.mq.fanout.two.queue]
+	at org.springframework.amqp.rabbit.listener.BlockingQueueConsumer.attemptPassiveDeclarations(BlockingQueueConsumer.java:706)
+	at org.springframework.amqp.rabbit.listener.BlockingQueueConsumer.start(BlockingQueueConsumer.java:596)
+	at org.springframework.amqp.rabbit.listener.SimpleMessageListenerContainer$AsyncMessageProcessingConsumer.run(SimpleMessageListenerContainer.java:1504)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: java.io.IOException
+	at com.rabbitmq.client.impl.AMQChannel.wrap(AMQChannel.java:124)
+	at com.rabbitmq.client.impl.AMQChannel.wrap(AMQChannel.java:120)
+	at com.rabbitmq.client.impl.AMQChannel.exnWrappingRpc(AMQChannel.java:142)
+	at com.rabbitmq.client.impl.ChannelN.queueDeclarePassive(ChannelN.java:1002)
+	at com.rabbitmq.client.impl.ChannelN.queueDeclarePassive(ChannelN.java:53)
+	at org.springframework.amqp.rabbit.support.PublisherCallbackChannelImpl.queueDeclarePassive(PublisherCallbackChannelImpl.java:339)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.amqp.rabbit.connection.CachingConnectionFactory$CachedChannelInvocationHandler.invoke(CachingConnectionFactory.java:1029)
+	at com.sun.proxy.$Proxy95.queueDeclarePassive(Unknown Source)
+	at org.springframework.amqp.rabbit.listener.BlockingQueueConsumer.attemptPassiveDeclarations(BlockingQueueConsumer.java:685)
+	... 3 more
+Caused by: com.rabbitmq.client.ShutdownSignalException: channel error; protocol method: #method<channel.close>(reply-code=404, reply-text=NOT_FOUND - no queue 'local.middleware.mq.fanout.two.queue' in vhost '/', class-id=50, method-id=10)
+	at com.rabbitmq.utility.ValueOrException.getValue(ValueOrException.java:66)
+	at com.rabbitmq.utility.BlockingValueOrException.uninterruptibleGetValue(BlockingValueOrException.java:36)
+	at com.rabbitmq.client.impl.AMQChannel$BlockingRpcContinuation.getReply(AMQChannel.java:443)
+	at com.rabbitmq.client.impl.AMQChannel.privateRpc(AMQChannel.java:263)
+	at com.rabbitmq.client.impl.AMQChannel.exnWrappingRpc(AMQChannel.java:136)
+	... 13 more
+Caused by: com.rabbitmq.client.ShutdownSignalException: channel error; protocol method: #method<channel.close>(reply-code=404, reply-text=NOT_FOUND - no queue 'local.middleware.mq.fanout.two.queue' in vhost '/', class-id=50, method-id=10)
+	at com.rabbitmq.client.impl.ChannelN.asyncShutdown(ChannelN.java:515)
+	at com.rabbitmq.client.impl.ChannelN.processAsync(ChannelN.java:340)
+	at com.rabbitmq.client.impl.AMQChannel.handleCompleteInboundCommand(AMQChannel.java:162)
+	at com.rabbitmq.client.impl.AMQChannel.handleFrame(AMQChannel.java:109)
+	at com.rabbitmq.client.impl.AMQConnection.readFrame(AMQConnection.java:676)
+	at com.rabbitmq.client.impl.AMQConnection.access$300(AMQConnection.java:48)
+	at com.rabbitmq.client.impl.AMQConnection$MainLoop.run(AMQConnection.java:603)
+	... 1 more
+[2021-02-22 14:53:18.106] boot -  WARN [SimpleAsyncTaskExecutor-1] --- BlockingQueueConsumer:Failed to declare queue: local.middleware.mq.fanout.two.queue
+[2021-02-22 14:53:18.106] boot -  WARN [SimpleAsyncTaskExecutor-1] --- BlockingQueueConsumer:Queue declaration failed; retries left=1
+org.springframework.amqp.rabbit.listener.BlockingQueueConsumer$DeclarationException: Failed to declare queue(s):[local.middleware.mq.fanout.two.queue]
+	at org.springframework.amqp.rabbit.listener.BlockingQueueConsumer.attemptPassiveDeclarations(BlockingQueueConsumer.java:706)
+	at org.springframework.amqp.rabbit.listener.BlockingQueueConsumer.start(BlockingQueueConsumer.java:596)
+	at org.springframework.amqp.rabbit.listener.SimpleMessageListenerContainer$AsyncMessageProcessingConsumer.run(SimpleMessageListenerContainer.java:1504)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: java.io.IOException
+	at com.rabbitmq.client.impl.AMQChannel.wrap(AMQChannel.java:124)
+	at com.rabbitmq.client.impl.AMQChannel.wrap(AMQChannel.java:120)
+	at com.rabbitmq.client.impl.AMQChannel.exnWrappingRpc(AMQChannel.java:142)
+	at com.rabbitmq.client.impl.ChannelN.queueDeclarePassive(ChannelN.java:1002)
+	at com.rabbitmq.client.impl.ChannelN.queueDeclarePassive(ChannelN.java:53)
+	at org.springframework.amqp.rabbit.support.PublisherCallbackChannelImpl.queueDeclarePassive(PublisherCallbackChannelImpl.java:339)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.amqp.rabbit.connection.CachingConnectionFactory$CachedChannelInvocationHandler.invoke(CachingConnectionFactory.java:1029)
+	at com.sun.proxy.$Proxy95.queueDeclarePassive(Unknown Source)
+	at org.springframework.amqp.rabbit.listener.BlockingQueueConsumer.attemptPassiveDeclarations(BlockingQueueConsumer.java:685)
+	... 3 more
+Caused by: com.rabbitmq.client.ShutdownSignalException: channel error; protocol method: #method<channel.close>(reply-code=404, reply-text=NOT_FOUND - no queue 'local.middleware.mq.fanout.two.queue' in vhost '/', class-id=50, method-id=10)
+	at com.rabbitmq.utility.ValueOrException.getValue(ValueOrException.java:66)
+	at com.rabbitmq.utility.BlockingValueOrException.uninterruptibleGetValue(BlockingValueOrException.java:36)
+	at com.rabbitmq.client.impl.AMQChannel$BlockingRpcContinuation.getReply(AMQChannel.java:443)
+	at com.rabbitmq.client.impl.AMQChannel.privateRpc(AMQChannel.java:263)
+	at com.rabbitmq.client.impl.AMQChannel.exnWrappingRpc(AMQChannel.java:136)
+	... 13 more
+Caused by: com.rabbitmq.client.ShutdownSignalException: channel error; protocol method: #method<channel.close>(reply-code=404, reply-text=NOT_FOUND - no queue 'local.middleware.mq.fanout.two.queue' in vhost '/', class-id=50, method-id=10)
+	at com.rabbitmq.client.impl.ChannelN.asyncShutdown(ChannelN.java:515)
+	at com.rabbitmq.client.impl.ChannelN.processAsync(ChannelN.java:340)
+	at com.rabbitmq.client.impl.AMQChannel.handleCompleteInboundCommand(AMQChannel.java:162)
+	at com.rabbitmq.client.impl.AMQChannel.handleFrame(AMQChannel.java:109)
+	at com.rabbitmq.client.impl.AMQConnection.readFrame(AMQConnection.java:676)
+	at com.rabbitmq.client.impl.AMQConnection.access$300(AMQConnection.java:48)
+	at com.rabbitmq.client.impl.AMQConnection$MainLoop.run(AMQConnection.java:603)
+	... 1 more
+[2021-02-22 14:53:23.123] boot -  WARN [SimpleAsyncTaskExecutor-1] --- BlockingQueueConsumer:Failed to declare queue: local.middleware.mq.fanout.two.queue
+[2021-02-22 14:53:23.123] boot - ERROR [SimpleAsyncTaskExecutor-1] --- SimpleMessageListenerContainer:Consumer received fatal=false exception on startup
+org.springframework.amqp.rabbit.listener.QueuesNotAvailableException: Cannot prepare queue for listener. Either the queue doesn't exist or the broker will not allow us to use it.
+	at org.springframework.amqp.rabbit.listener.BlockingQueueConsumer.start(BlockingQueueConsumer.java:628)
+	at org.springframework.amqp.rabbit.listener.SimpleMessageListenerContainer$AsyncMessageProcessingConsumer.run(SimpleMessageListenerContainer.java:1504)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: org.springframework.amqp.rabbit.listener.BlockingQueueConsumer$DeclarationException: Failed to declare queue(s):[local.middleware.mq.fanout.two.queue]
+	at org.springframework.amqp.rabbit.listener.BlockingQueueConsumer.attemptPassiveDeclarations(BlockingQueueConsumer.java:706)
+	at org.springframework.amqp.rabbit.listener.BlockingQueueConsumer.start(BlockingQueueConsumer.java:596)
+	... 2 more
+Caused by: java.io.IOException
+	at com.rabbitmq.client.impl.AMQChannel.wrap(AMQChannel.java:124)
+	at com.rabbitmq.client.impl.AMQChannel.wrap(AMQChannel.java:120)
+	at com.rabbitmq.client.impl.AMQChannel.exnWrappingRpc(AMQChannel.java:142)
+	at com.rabbitmq.client.impl.ChannelN.queueDeclarePassive(ChannelN.java:1002)
+	at com.rabbitmq.client.impl.ChannelN.queueDeclarePassive(ChannelN.java:53)
+	at org.springframework.amqp.rabbit.support.PublisherCallbackChannelImpl.queueDeclarePassive(PublisherCallbackChannelImpl.java:339)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.amqp.rabbit.connection.CachingConnectionFactory$CachedChannelInvocationHandler.invoke(CachingConnectionFactory.java:1029)
+	at com.sun.proxy.$Proxy95.queueDeclarePassive(Unknown Source)
+	at org.springframework.amqp.rabbit.listener.BlockingQueueConsumer.attemptPassiveDeclarations(BlockingQueueConsumer.java:685)
+	... 3 more
+Caused by: com.rabbitmq.client.ShutdownSignalException: channel error; protocol method: #method<channel.close>(reply-code=404, reply-text=NOT_FOUND - no queue 'local.middleware.mq.fanout.two.queue' in vhost '/', class-id=50, method-id=10)
+	at com.rabbitmq.utility.ValueOrException.getValue(ValueOrException.java:66)
+	at com.rabbitmq.utility.BlockingValueOrException.uninterruptibleGetValue(BlockingValueOrException.java:36)
+	at com.rabbitmq.client.impl.AMQChannel$BlockingRpcContinuation.getReply(AMQChannel.java:443)
+	at com.rabbitmq.client.impl.AMQChannel.privateRpc(AMQChannel.java:263)
+	at com.rabbitmq.client.impl.AMQChannel.exnWrappingRpc(AMQChannel.java:136)
+	... 13 more
+Caused by: com.rabbitmq.client.ShutdownSignalException: channel error; protocol method: #method<channel.close>(reply-code=404, reply-text=NOT_FOUND - no queue 'local.middleware.mq.fanout.two.queue' in vhost '/', class-id=50, method-id=10)
+	at com.rabbitmq.client.impl.ChannelN.asyncShutdown(ChannelN.java:515)
+	at com.rabbitmq.client.impl.ChannelN.processAsync(ChannelN.java:340)
+	at com.rabbitmq.client.impl.AMQChannel.handleCompleteInboundCommand(AMQChannel.java:162)
+	at com.rabbitmq.client.impl.AMQChannel.handleFrame(AMQChannel.java:109)
+	at com.rabbitmq.client.impl.AMQConnection.readFrame(AMQConnection.java:676)
+	at com.rabbitmq.client.impl.AMQConnection.access$300(AMQConnection.java:48)
+	at com.rabbitmq.client.impl.AMQConnection$MainLoop.run(AMQConnection.java:603)
+	... 1 more
+[2021-02-22 14:53:23.124] boot - ERROR [SimpleAsyncTaskExecutor-1] --- SimpleMessageListenerContainer:Consumer received fatal exception on startup
+org.springframework.amqp.rabbit.listener.QueuesNotAvailableException: Cannot prepare queue for listener. Either the queue doesn't exist or the broker will not allow us to use it.
+	at org.springframework.amqp.rabbit.listener.BlockingQueueConsumer.start(BlockingQueueConsumer.java:628)
+	at org.springframework.amqp.rabbit.listener.SimpleMessageListenerContainer$AsyncMessageProcessingConsumer.run(SimpleMessageListenerContainer.java:1504)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: org.springframework.amqp.rabbit.listener.BlockingQueueConsumer$DeclarationException: Failed to declare queue(s):[local.middleware.mq.fanout.two.queue]
+	at org.springframework.amqp.rabbit.listener.BlockingQueueConsumer.attemptPassiveDeclarations(BlockingQueueConsumer.java:706)
+	at org.springframework.amqp.rabbit.listener.BlockingQueueConsumer.start(BlockingQueueConsumer.java:596)
+	... 2 more
+Caused by: java.io.IOException
+	at com.rabbitmq.client.impl.AMQChannel.wrap(AMQChannel.java:124)
+	at com.rabbitmq.client.impl.AMQChannel.wrap(AMQChannel.java:120)
+	at com.rabbitmq.client.impl.AMQChannel.exnWrappingRpc(AMQChannel.java:142)
+	at com.rabbitmq.client.impl.ChannelN.queueDeclarePassive(ChannelN.java:1002)
+	at com.rabbitmq.client.impl.ChannelN.queueDeclarePassive(ChannelN.java:53)
+	at org.springframework.amqp.rabbit.support.PublisherCallbackChannelImpl.queueDeclarePassive(PublisherCallbackChannelImpl.java:339)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.amqp.rabbit.connection.CachingConnectionFactory$CachedChannelInvocationHandler.invoke(CachingConnectionFactory.java:1029)
+	at com.sun.proxy.$Proxy95.queueDeclarePassive(Unknown Source)
+	at org.springframework.amqp.rabbit.listener.BlockingQueueConsumer.attemptPassiveDeclarations(BlockingQueueConsumer.java:685)
+	... 3 more
+Caused by: com.rabbitmq.client.ShutdownSignalException: channel error; protocol method: #method<channel.close>(reply-code=404, reply-text=NOT_FOUND - no queue 'local.middleware.mq.fanout.two.queue' in vhost '/', class-id=50, method-id=10)
+	at com.rabbitmq.utility.ValueOrException.getValue(ValueOrException.java:66)
+	at com.rabbitmq.utility.BlockingValueOrException.uninterruptibleGetValue(BlockingValueOrException.java:36)
+	at com.rabbitmq.client.impl.AMQChannel$BlockingRpcContinuation.getReply(AMQChannel.java:443)
+	at com.rabbitmq.client.impl.AMQChannel.privateRpc(AMQChannel.java:263)
+	at com.rabbitmq.client.impl.AMQChannel.exnWrappingRpc(AMQChannel.java:136)
+	... 13 more
+Caused by: com.rabbitmq.client.ShutdownSignalException: channel error; protocol method: #method<channel.close>(reply-code=404, reply-text=NOT_FOUND - no queue 'local.middleware.mq.fanout.two.queue' in vhost '/', class-id=50, method-id=10)
+	at com.rabbitmq.client.impl.ChannelN.asyncShutdown(ChannelN.java:515)
+	at com.rabbitmq.client.impl.ChannelN.processAsync(ChannelN.java:340)
+	at com.rabbitmq.client.impl.AMQChannel.handleCompleteInboundCommand(AMQChannel.java:162)
+	at com.rabbitmq.client.impl.AMQChannel.handleFrame(AMQChannel.java:109)
+	at com.rabbitmq.client.impl.AMQConnection.readFrame(AMQConnection.java:676)
+	at com.rabbitmq.client.impl.AMQConnection.access$300(AMQConnection.java:48)
+	at com.rabbitmq.client.impl.AMQConnection$MainLoop.run(AMQConnection.java:603)
+	... 1 more
+[2021-02-22 14:53:23.129] boot - ERROR [SimpleAsyncTaskExecutor-1] --- SimpleMessageListenerContainer:Stopping container from aborted consumer
+[2021-02-22 14:53:23.130] boot -  INFO [SimpleAsyncTaskExecutor-1] --- SimpleMessageListenerContainer:Waiting for workers to finish.
+[2021-02-22 14:53:23.130] boot -  INFO [SimpleAsyncTaskExecutor-1] --- SimpleMessageListenerContainer:Successfully waited for workers to finish.
+[2021-02-22 14:53:23.130] boot -  WARN [main] --- GenericWebApplicationContext:Exception encountered during context initialization - cancelling refresh attempt: org.springframework.context.ApplicationContextException: Failed to start bean 'org.springframework.amqp.rabbit.config.internalRabbitListenerEndpointRegistry'; nested exception is org.springframework.amqp.AmqpIllegalStateException: Fatal exception on listener startup
+[2021-02-22 14:53:23.136] boot -  INFO [main] --- SimpleMessageListenerContainer:Waiting for workers to finish.
+[2021-02-22 14:53:23.167] boot -  INFO [main] --- SimpleMessageListenerContainer:Successfully waited for workers to finish.
+[2021-02-22 14:53:23.173] boot -  INFO [main] --- SimpleMessageListenerContainer:Waiting for workers to finish.
+[2021-02-22 14:53:24.171] boot -  INFO [main] --- SimpleMessageListenerContainer:Successfully waited for workers to finish.
+[2021-02-22 14:53:24.171] boot -  INFO [main] --- SimpleMessageListenerContainer:Shutdown ignored - container is not active already
+[2021-02-22 14:53:24.172] boot -  INFO [main] --- SimpleMessageListenerContainer:Shutdown ignored - container is not active already
+[2021-02-22 14:53:24.190] boot -  INFO [main] --- AutoConfigurationReportLoggingInitializer:
+
+Error starting ApplicationContext. To display the auto-configuration report re-run your application with 'debug' enabled.
+[2021-02-22 14:53:24.194] boot - ERROR [main] --- SpringApplication:Application startup failed
+org.springframework.context.ApplicationContextException: Failed to start bean 'org.springframework.amqp.rabbit.config.internalRabbitListenerEndpointRegistry'; nested exception is org.springframework.amqp.AmqpIllegalStateException: Fatal exception on listener startup
+	at org.springframework.context.support.DefaultLifecycleProcessor.doStart(DefaultLifecycleProcessor.java:176)
+	at org.springframework.context.support.DefaultLifecycleProcessor.access$200(DefaultLifecycleProcessor.java:50)
+	at org.springframework.context.support.DefaultLifecycleProcessor$LifecycleGroup.start(DefaultLifecycleProcessor.java:350)
+	at org.springframework.context.support.DefaultLifecycleProcessor.startBeans(DefaultLifecycleProcessor.java:149)
+	at org.springframework.context.support.DefaultLifecycleProcessor.onRefresh(DefaultLifecycleProcessor.java:112)
+	at org.springframework.context.support.AbstractApplicationContext.finishRefresh(AbstractApplicationContext.java:880)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:546)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:693)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:360)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:303)
+	at org.springframework.boot.test.context.SpringBootContextLoader.loadContext(SpringBootContextLoader.java:121)
+	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContextInternal(DefaultCacheAwareContextLoaderDelegate.java:98)
+	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContext(DefaultCacheAwareContextLoaderDelegate.java:116)
+	at org.springframework.test.context.support.DefaultTestContext.getApplicationContext(DefaultTestContext.java:83)
+	at org.springframework.test.context.web.ServletTestExecutionListener.setUpRequestContextIfNecessary(ServletTestExecutionListener.java:189)
+	at org.springframework.test.context.web.ServletTestExecutionListener.prepareTestInstance(ServletTestExecutionListener.java:131)
+	at org.springframework.test.context.TestContextManager.prepareTestInstance(TestContextManager.java:230)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.createTest(SpringJUnit4ClassRunner.java:228)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner$1.runReflectiveCall(SpringJUnit4ClassRunner.java:287)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.methodBlock(SpringJUnit4ClassRunner.java:289)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:247)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:94)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)
+	at org.springframework.test.context.junit4.statements.RunBeforeTestClassCallbacks.evaluate(RunBeforeTestClassCallbacks.java:61)
+	at org.springframework.test.context.junit4.statements.RunAfterTestClassCallbacks.evaluate(RunAfterTestClassCallbacks.java:70)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:363)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.run(SpringJUnit4ClassRunner.java:191)
+	at org.junit.runner.JUnitCore.run(JUnitCore.java:137)
+	at com.intellij.junit4.JUnit4IdeaTestRunner.startRunnerWithArgs(JUnit4IdeaTestRunner.java:69)
+	at com.intellij.rt.junit.IdeaTestRunner$Repeater.startRunnerWithArgs(IdeaTestRunner.java:33)
+	at com.intellij.rt.junit.JUnitStarter.prepareStreamsAndStart(JUnitStarter.java:220)
+	at com.intellij.rt.junit.JUnitStarter.main(JUnitStarter.java:53)
+Caused by: org.springframework.amqp.AmqpIllegalStateException: Fatal exception on listener startup
+	at org.springframework.amqp.rabbit.listener.SimpleMessageListenerContainer.doStart(SimpleMessageListenerContainer.java:897)
+	at org.springframework.amqp.rabbit.listener.AbstractMessageListenerContainer.start(AbstractMessageListenerContainer.java:625)
+	at org.springframework.amqp.rabbit.listener.RabbitListenerEndpointRegistry.startIfNecessary(RabbitListenerEndpointRegistry.java:279)
+	at org.springframework.amqp.rabbit.listener.RabbitListenerEndpointRegistry.start(RabbitListenerEndpointRegistry.java:235)
+	at org.springframework.context.support.DefaultLifecycleProcessor.doStart(DefaultLifecycleProcessor.java:173)
+	... 36 more
+Caused by: org.springframework.amqp.rabbit.listener.QueuesNotAvailableException: Cannot prepare queue for listener. Either the queue doesn't exist or the broker will not allow us to use it.
+	at org.springframework.amqp.rabbit.listener.BlockingQueueConsumer.start(BlockingQueueConsumer.java:628)
+	at org.springframework.amqp.rabbit.listener.SimpleMessageListenerContainer$AsyncMessageProcessingConsumer.run(SimpleMessageListenerContainer.java:1504)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: org.springframework.amqp.rabbit.listener.BlockingQueueConsumer$DeclarationException: Failed to declare queue(s):[local.middleware.mq.fanout.two.queue]
+	at org.springframework.amqp.rabbit.listener.BlockingQueueConsumer.attemptPassiveDeclarations(BlockingQueueConsumer.java:706)
+	at org.springframework.amqp.rabbit.listener.BlockingQueueConsumer.start(BlockingQueueConsumer.java:596)
+	... 2 more
+Caused by: java.io.IOException
+	at com.rabbitmq.client.impl.AMQChannel.wrap(AMQChannel.java:124)
+	at com.rabbitmq.client.impl.AMQChannel.wrap(AMQChannel.java:120)
+	at com.rabbitmq.client.impl.AMQChannel.exnWrappingRpc(AMQChannel.java:142)
+	at com.rabbitmq.client.impl.ChannelN.queueDeclarePassive(ChannelN.java:1002)
+	at com.rabbitmq.client.impl.ChannelN.queueDeclarePassive(ChannelN.java:53)
+	at org.springframework.amqp.rabbit.support.PublisherCallbackChannelImpl.queueDeclarePassive(PublisherCallbackChannelImpl.java:339)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.amqp.rabbit.connection.CachingConnectionFactory$CachedChannelInvocationHandler.invoke(CachingConnectionFactory.java:1029)
+	at com.sun.proxy.$Proxy95.queueDeclarePassive(Unknown Source)
+	at org.springframework.amqp.rabbit.listener.BlockingQueueConsumer.attemptPassiveDeclarations(BlockingQueueConsumer.java:685)
+	... 3 more
+Caused by: com.rabbitmq.client.ShutdownSignalException: channel error; protocol method: #method<channel.close>(reply-code=404, reply-text=NOT_FOUND - no queue 'local.middleware.mq.fanout.two.queue' in vhost '/', class-id=50, method-id=10)
+	at com.rabbitmq.utility.ValueOrException.getValue(ValueOrException.java:66)
+	at com.rabbitmq.utility.BlockingValueOrException.uninterruptibleGetValue(BlockingValueOrException.java:36)
+	at com.rabbitmq.client.impl.AMQChannel$BlockingRpcContinuation.getReply(AMQChannel.java:443)
+	at com.rabbitmq.client.impl.AMQChannel.privateRpc(AMQChannel.java:263)
+	at com.rabbitmq.client.impl.AMQChannel.exnWrappingRpc(AMQChannel.java:136)
+	... 13 more
+Caused by: com.rabbitmq.client.ShutdownSignalException: channel error; protocol method: #method<channel.close>(reply-code=404, reply-text=NOT_FOUND - no queue 'local.middleware.mq.fanout.two.queue' in vhost '/', class-id=50, method-id=10)
+	at com.rabbitmq.client.impl.ChannelN.asyncShutdown(ChannelN.java:515)
+	at com.rabbitmq.client.impl.ChannelN.processAsync(ChannelN.java:340)
+	at com.rabbitmq.client.impl.AMQChannel.handleCompleteInboundCommand(AMQChannel.java:162)
+	at com.rabbitmq.client.impl.AMQChannel.handleFrame(AMQChannel.java:109)
+	at com.rabbitmq.client.impl.AMQConnection.readFrame(AMQConnection.java:676)
+	at com.rabbitmq.client.impl.AMQConnection.access$300(AMQConnection.java:48)
+	at com.rabbitmq.client.impl.AMQConnection$MainLoop.run(AMQConnection.java:603)
+	... 1 more
+[2021-02-22 14:53:24.199] boot - ERROR [main] --- TestContextManager:Caught exception while allowing TestExecutionListener [org.springframework.test.context.web.ServletTestExecutionListener@1060b431] to prepare test instance [com.wangjunyao.middleware.server.RabbitmqTest@625a9c5d]
+java.lang.IllegalStateException: Failed to load ApplicationContext
+	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContext(DefaultCacheAwareContextLoaderDelegate.java:124)
+	at org.springframework.test.context.support.DefaultTestContext.getApplicationContext(DefaultTestContext.java:83)
+	at org.springframework.test.context.web.ServletTestExecutionListener.setUpRequestContextIfNecessary(ServletTestExecutionListener.java:189)
+	at org.springframework.test.context.web.ServletTestExecutionListener.prepareTestInstance(ServletTestExecutionListener.java:131)
+	at org.springframework.test.context.TestContextManager.prepareTestInstance(TestContextManager.java:230)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.createTest(SpringJUnit4ClassRunner.java:228)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner$1.runReflectiveCall(SpringJUnit4ClassRunner.java:287)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.methodBlock(SpringJUnit4ClassRunner.java:289)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:247)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:94)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)
+	at org.springframework.test.context.junit4.statements.RunBeforeTestClassCallbacks.evaluate(RunBeforeTestClassCallbacks.java:61)
+	at org.springframework.test.context.junit4.statements.RunAfterTestClassCallbacks.evaluate(RunAfterTestClassCallbacks.java:70)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:363)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.run(SpringJUnit4ClassRunner.java:191)
+	at org.junit.runner.JUnitCore.run(JUnitCore.java:137)
+	at com.intellij.junit4.JUnit4IdeaTestRunner.startRunnerWithArgs(JUnit4IdeaTestRunner.java:69)
+	at com.intellij.rt.junit.IdeaTestRunner$Repeater.startRunnerWithArgs(IdeaTestRunner.java:33)
+	at com.intellij.rt.junit.JUnitStarter.prepareStreamsAndStart(JUnitStarter.java:220)
+	at com.intellij.rt.junit.JUnitStarter.main(JUnitStarter.java:53)
+Caused by: org.springframework.context.ApplicationContextException: Failed to start bean 'org.springframework.amqp.rabbit.config.internalRabbitListenerEndpointRegistry'; nested exception is org.springframework.amqp.AmqpIllegalStateException: Fatal exception on listener startup
+	at org.springframework.context.support.DefaultLifecycleProcessor.doStart(DefaultLifecycleProcessor.java:176)
+	at org.springframework.context.support.DefaultLifecycleProcessor.access$200(DefaultLifecycleProcessor.java:50)
+	at org.springframework.context.support.DefaultLifecycleProcessor$LifecycleGroup.start(DefaultLifecycleProcessor.java:350)
+	at org.springframework.context.support.DefaultLifecycleProcessor.startBeans(DefaultLifecycleProcessor.java:149)
+	at org.springframework.context.support.DefaultLifecycleProcessor.onRefresh(DefaultLifecycleProcessor.java:112)
+	at org.springframework.context.support.AbstractApplicationContext.finishRefresh(AbstractApplicationContext.java:880)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:546)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:693)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:360)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:303)
+	at org.springframework.boot.test.context.SpringBootContextLoader.loadContext(SpringBootContextLoader.java:121)
+	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContextInternal(DefaultCacheAwareContextLoaderDelegate.java:98)
+	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContext(DefaultCacheAwareContextLoaderDelegate.java:116)
+	... 24 more
+Caused by: org.springframework.amqp.AmqpIllegalStateException: Fatal exception on listener startup
+	at org.springframework.amqp.rabbit.listener.SimpleMessageListenerContainer.doStart(SimpleMessageListenerContainer.java:897)
+	at org.springframework.amqp.rabbit.listener.AbstractMessageListenerContainer.start(AbstractMessageListenerContainer.java:625)
+	at org.springframework.amqp.rabbit.listener.RabbitListenerEndpointRegistry.startIfNecessary(RabbitListenerEndpointRegistry.java:279)
+	at org.springframework.amqp.rabbit.listener.RabbitListenerEndpointRegistry.start(RabbitListenerEndpointRegistry.java:235)
+	at org.springframework.context.support.DefaultLifecycleProcessor.doStart(DefaultLifecycleProcessor.java:173)
+	... 36 more
+Caused by: org.springframework.amqp.rabbit.listener.QueuesNotAvailableException: Cannot prepare queue for listener. Either the queue doesn't exist or the broker will not allow us to use it.
+	at org.springframework.amqp.rabbit.listener.BlockingQueueConsumer.start(BlockingQueueConsumer.java:628)
+	at org.springframework.amqp.rabbit.listener.SimpleMessageListenerContainer$AsyncMessageProcessingConsumer.run(SimpleMessageListenerContainer.java:1504)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: org.springframework.amqp.rabbit.listener.BlockingQueueConsumer$DeclarationException: Failed to declare queue(s):[local.middleware.mq.fanout.two.queue]
+	at org.springframework.amqp.rabbit.listener.BlockingQueueConsumer.attemptPassiveDeclarations(BlockingQueueConsumer.java:706)
+	at org.springframework.amqp.rabbit.listener.BlockingQueueConsumer.start(BlockingQueueConsumer.java:596)
+	... 2 more
+Caused by: java.io.IOException
+	at com.rabbitmq.client.impl.AMQChannel.wrap(AMQChannel.java:124)
+	at com.rabbitmq.client.impl.AMQChannel.wrap(AMQChannel.java:120)
+	at com.rabbitmq.client.impl.AMQChannel.exnWrappingRpc(AMQChannel.java:142)
+	at com.rabbitmq.client.impl.ChannelN.queueDeclarePassive(ChannelN.java:1002)
+	at com.rabbitmq.client.impl.ChannelN.queueDeclarePassive(ChannelN.java:53)
+	at org.springframework.amqp.rabbit.support.PublisherCallbackChannelImpl.queueDeclarePassive(PublisherCallbackChannelImpl.java:339)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.amqp.rabbit.connection.CachingConnectionFactory$CachedChannelInvocationHandler.invoke(CachingConnectionFactory.java:1029)
+	at com.sun.proxy.$Proxy95.queueDeclarePassive(Unknown Source)
+	at org.springframework.amqp.rabbit.listener.BlockingQueueConsumer.attemptPassiveDeclarations(BlockingQueueConsumer.java:685)
+	... 3 more
+Caused by: com.rabbitmq.client.ShutdownSignalException: channel error; protocol method: #method<channel.close>(reply-code=404, reply-text=NOT_FOUND - no queue 'local.middleware.mq.fanout.two.queue' in vhost '/', class-id=50, method-id=10)
+	at com.rabbitmq.utility.ValueOrException.getValue(ValueOrException.java:66)
+	at com.rabbitmq.utility.BlockingValueOrException.uninterruptibleGetValue(BlockingValueOrException.java:36)
+	at com.rabbitmq.client.impl.AMQChannel$BlockingRpcContinuation.getReply(AMQChannel.java:443)
+	at com.rabbitmq.client.impl.AMQChannel.privateRpc(AMQChannel.java:263)
+	at com.rabbitmq.client.impl.AMQChannel.exnWrappingRpc(AMQChannel.java:136)
+	... 13 more
+Caused by: com.rabbitmq.client.ShutdownSignalException: channel error; protocol method: #method<channel.close>(reply-code=404, reply-text=NOT_FOUND - no queue 'local.middleware.mq.fanout.two.queue' in vhost '/', class-id=50, method-id=10)
+	at com.rabbitmq.client.impl.ChannelN.asyncShutdown(ChannelN.java:515)
+	at com.rabbitmq.client.impl.ChannelN.processAsync(ChannelN.java:340)
+	at com.rabbitmq.client.impl.AMQChannel.handleCompleteInboundCommand(AMQChannel.java:162)
+	at com.rabbitmq.client.impl.AMQChannel.handleFrame(AMQChannel.java:109)
+	at com.rabbitmq.client.impl.AMQConnection.readFrame(AMQConnection.java:676)
+	at com.rabbitmq.client.impl.AMQConnection.access$300(AMQConnection.java:48)
+	at com.rabbitmq.client.impl.AMQConnection$MainLoop.run(AMQConnection.java:603)
+	... 1 more
+[2021-02-22 14:58:24.253] boot -  INFO [main] --- SpringBootTestContextBootstrapper:Neither @ContextConfiguration nor @ContextHierarchy found for test class [com.wangjunyao.middleware.server.RabbitmqTest], using SpringBootContextLoader
+[2021-02-22 14:58:24.264] boot -  INFO [main] --- AbstractContextLoader:Could not detect default resource locations for test class [com.wangjunyao.middleware.server.RabbitmqTest]: no resource found for suffixes {-context.xml, Context.groovy}.
+[2021-02-22 14:58:24.420] boot -  INFO [main] --- SpringBootTestContextBootstrapper:Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener, org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener]
+[2021-02-22 14:58:24.469] boot -  INFO [main] --- SpringBootTestContextBootstrapper:Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@1060b431, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@612679d6, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener@11758f2a, org.springframework.boot.test.autoconfigure.SpringBootDependencyInjectionTestExecutionListener@e720b71, org.springframework.test.context.support.DirtiesContextTestExecutionListener@1b26f7b2, org.springframework.test.context.transaction.TransactionalTestExecutionListener@491cc5c9, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@74ad1f1f, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener@6a1aab78, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener@462d5aee, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener@69b0fd6f, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener@757942a1, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener@4a87761d]
+[2021-02-22 14:58:25.398] boot -  INFO [main] --- RabbitmqTest:Starting RabbitmqTest on 王俊瑶 with PID 1412 (started by wangjunyao in E:\idea-workspace\middleware\server)
+[2021-02-22 14:58:25.398] boot -  INFO [main] --- RabbitmqTest:No active profile set, falling back to default profiles: default
+[2021-02-22 14:58:25.455] boot -  INFO [main] --- GenericWebApplicationContext:Refreshing org.springframework.web.context.support.GenericWebApplicationContext@2a4fb17b: startup date [Mon Feb 22 14:58:25 CST 2021]; root of context hierarchy
+[2021-02-22 14:58:26.385] boot -  INFO [background-preinit] --- Version:HV000001: Hibernate Validator 5.3.6.Final
+[2021-02-22 14:58:27.755] boot -  INFO [main] --- RepositoryConfigurationDelegate:Multiple Spring Data modules found, entering strict repository configuration mode!
+[2021-02-22 14:58:29.885] boot -  INFO [main] --- PostProcessorRegistrationDelegate$BeanPostProcessorChecker:Bean 'org.springframework.amqp.rabbit.annotation.RabbitBootstrapConfiguration' of type [org.springframework.amqp.rabbit.annotation.RabbitBootstrapConfiguration$$EnhancerBySpringCGLIB$$1d0f9f8d] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+[2021-02-22 14:58:30.001] boot -  INFO [main] --- PostProcessorRegistrationDelegate$BeanPostProcessorChecker:Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$56a3e15f] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+[2021-02-22 14:58:33.952] boot -  INFO [main] --- RequestMappingHandlerAdapter:Looking for @ControllerAdvice: org.springframework.web.context.support.GenericWebApplicationContext@2a4fb17b: startup date [Mon Feb 22 14:58:25 CST 2021]; root of context hierarchy
+[2021-02-22 14:58:34.119] boot -  INFO [main] --- RequestMappingHandlerMapping:Mapped "{[/book/info],methods=[GET]}" onto public com.wangjunyao.middleware.server.entity.Book com.wangjunyao.middleware.server.controller.BookController.info(java.lang.Integer,java.lang.String)
+[2021-02-22 14:58:34.122] boot -  INFO [main] --- RequestMappingHandlerMapping:Mapped "{[/cache/pass/item/info],methods=[GET]}" onto public java.util.Map<java.lang.String, java.lang.Object> com.wangjunyao.middleware.server.controller.redis.CachePassController.getItem(java.lang.String)
+[2021-02-22 14:58:34.125] boot -  INFO [main] --- RequestMappingHandlerMapping:Mapped "{[/red/packet/rob],methods=[GET],consumes=[application/json;charset=UTF-8]}" onto public com.wangjunyao.middleware.api.response.BaseResponse com.wangjunyao.middleware.server.controller.redis.RedPacketController.rob(java.lang.Integer,java.lang.String)
+[2021-02-22 14:58:34.125] boot -  INFO [main] --- RequestMappingHandlerMapping:Mapped "{[/red/packet/hand/out],methods=[POST],consumes=[application/json;charset=UTF-8]}" onto public com.wangjunyao.middleware.api.response.BaseResponse com.wangjunyao.middleware.server.controller.redis.RedPacketController.handOut(com.wangjunyao.middleware.server.dto.RedPacketDto,org.springframework.validation.BindingResult)
+[2021-02-22 14:58:34.130] boot -  INFO [main] --- RequestMappingHandlerMapping:Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+[2021-02-22 14:58:34.132] boot -  INFO [main] --- RequestMappingHandlerMapping:Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+[2021-02-22 14:58:34.266] boot -  INFO [main] --- SimpleUrlHandlerMapping:Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+[2021-02-22 14:58:34.267] boot -  INFO [main] --- SimpleUrlHandlerMapping:Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+[2021-02-22 14:58:34.352] boot -  INFO [main] --- SimpleUrlHandlerMapping:Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+[2021-02-22 14:58:35.278] boot -  INFO [main] --- DefaultLifecycleProcessor:Starting beans in phase 2147483647
+[2021-02-22 14:58:35.292] boot -  INFO [SimpleAsyncTaskExecutor-1] --- CachingConnectionFactory:Attempting to connect to: [127.0.0.1:5672]
+[2021-02-22 14:58:35.403] boot -  INFO [SimpleAsyncTaskExecutor-1] --- CachingConnectionFactory:Created new connection: rabbitConnectionFactory#69e1879c:0/SimpleConnection@342dc3e4 [delegate=amqp://guest@127.0.0.1:5672/, localPort= 61640]
+[2021-02-22 14:58:35.619] boot -  INFO [main] --- RabbitmqTest:Started RabbitmqTest in 10.894 seconds (JVM running for 12.555)
+[2021-02-22 14:58:35.898] boot -  INFO [main] --- ModelPublisher:消息模型fanoutExchange - 生产者 - 发送消息：EventInfo(id=1, module=增删改查模块, name=基于fanoutExchange的消息模块, desc=这是基于fanoutExchange的消息模型)
+[2021-02-22 14:58:35.912] boot -  INFO [Thread-2] --- GenericWebApplicationContext:Closing org.springframework.web.context.support.GenericWebApplicationContext@2a4fb17b: startup date [Mon Feb 22 14:58:25 CST 2021]; root of context hierarchy
+[2021-02-22 14:58:35.914] boot -  INFO [Thread-2] --- DefaultLifecycleProcessor:Stopping beans in phase 2147483647
+[2021-02-22 14:58:35.920] boot -  INFO [Thread-2] --- SimpleMessageListenerContainer:Waiting for workers to finish.
+[2021-02-22 14:58:36.015] boot -  WARN [SimpleAsyncTaskExecutor-1] --- Jackson2JsonMessageConverter:Could not convert incoming message with content-type [application/octet-stream], 'json' keyword missing.
+[2021-02-22 14:58:36.599] boot -  INFO [Thread-2] --- SimpleMessageListenerContainer:Successfully waited for workers to finish.
+[2021-02-22 14:58:37.419] boot -  INFO [Thread-2] --- SimpleMessageListenerContainer:Waiting for workers to finish.
+[2021-02-22 14:58:37.474] boot -  INFO [SimpleAsyncTaskExecutor-1] --- ModelConsumer:消息模型fanoutExchangeOne - 消费者 - 监听消费到消息：EventInfo(id=1, module=增删改查模块, name=基于fanoutExchange的消息模块, desc=这是基于fanoutExchange的消息模型)
+[2021-02-22 14:58:37.479] boot -  WARN [SimpleAsyncTaskExecutor-1] --- Jackson2JsonMessageConverter:Could not convert incoming message with content-type [application/octet-stream], 'json' keyword missing.
+[2021-02-22 14:58:37.481] boot -  INFO [SimpleAsyncTaskExecutor-1] --- ModelConsumer:消息模型fanoutExchangeTwo - 消费者 - 监听消费到消息：EventInfo(id=1, module=增删改查模块, name=基于fanoutExchange的消息模块, desc=这是基于fanoutExchange的消息模型)
+[2021-02-22 14:58:37.610] boot -  INFO [Thread-2] --- SimpleMessageListenerContainer:Successfully waited for workers to finish.
+[2021-02-22 14:58:37.612] boot -  INFO [Thread-2] --- SimpleMessageListenerContainer:Waiting for workers to finish.
+[2021-02-22 14:58:37.674] boot -  INFO [AMQP Connection 127.0.0.1:5672] --- RabbitmqConfig:消息发送成功：correlationData(null), ack(true), cause(null)
+[2021-02-22 14:58:38.483] boot -  INFO [Thread-2] --- SimpleMessageListenerContainer:Successfully waited for workers to finish.
+[2021-02-22 14:58:38.486] boot -  INFO [Thread-2] --- SimpleMessageListenerContainer:Waiting for workers to finish.
+[2021-02-22 14:58:39.492] boot -  INFO [Thread-2] --- SimpleMessageListenerContainer:Successfully waited for workers to finish.
+[2021-02-22 14:58:39.493] boot -  INFO [Thread-2] --- SimpleMessageListenerContainer:Shutdown ignored - container is not active already
+[2021-02-22 14:58:39.494] boot -  INFO [Thread-2] --- SimpleMessageListenerContainer:Shutdown ignored - container is not active already
+[2021-02-22 14:58:39.494] boot -  INFO [Thread-2] --- SimpleMessageListenerContainer:Shutdown ignored - container is not active already
+[2021-02-22 14:58:39.494] boot -  INFO [Thread-2] --- SimpleMessageListenerContainer:Shutdown ignored - container is not active already
+[2021-02-22 15:43:42.758] boot -  INFO [main] --- SpringBootTestContextBootstrapper:Neither @ContextConfiguration nor @ContextHierarchy found for test class [com.wangjunyao.middleware.server.RabbitmqTest], using SpringBootContextLoader
+[2021-02-22 15:43:42.767] boot -  INFO [main] --- AbstractContextLoader:Could not detect default resource locations for test class [com.wangjunyao.middleware.server.RabbitmqTest]: no resource found for suffixes {-context.xml, Context.groovy}.
+[2021-02-22 15:43:42.918] boot -  INFO [main] --- SpringBootTestContextBootstrapper:Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener, org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener]
+[2021-02-22 15:43:42.965] boot -  INFO [main] --- SpringBootTestContextBootstrapper:Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@4eb7f003, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@eafc191, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener@612fc6eb, org.springframework.boot.test.autoconfigure.SpringBootDependencyInjectionTestExecutionListener@1060b431, org.springframework.test.context.support.DirtiesContextTestExecutionListener@612679d6, org.springframework.test.context.transaction.TransactionalTestExecutionListener@11758f2a, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@e720b71, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener@1b26f7b2, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener@491cc5c9, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener@74ad1f1f, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener@6a1aab78, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener@462d5aee]
+[2021-02-22 15:43:44.517] boot -  INFO [main] --- RabbitmqTest:Starting RabbitmqTest on 王俊瑶 with PID 8952 (started by wangjunyao in E:\idea-workspace\middleware\server)
+[2021-02-22 15:43:44.518] boot -  INFO [main] --- RabbitmqTest:No active profile set, falling back to default profiles: default
+[2021-02-22 15:43:44.663] boot -  INFO [main] --- GenericWebApplicationContext:Refreshing org.springframework.web.context.support.GenericWebApplicationContext@6302bbb1: startup date [Mon Feb 22 15:43:44 CST 2021]; root of context hierarchy
+[2021-02-22 15:43:46.228] boot -  INFO [background-preinit] --- Version:HV000001: Hibernate Validator 5.3.6.Final
+[2021-02-22 15:43:46.770] boot -  INFO [main] --- RepositoryConfigurationDelegate:Multiple Spring Data modules found, entering strict repository configuration mode!
+[2021-02-22 15:43:47.579] boot -  INFO [main] --- PostProcessorRegistrationDelegate$BeanPostProcessorChecker:Bean 'org.springframework.amqp.rabbit.annotation.RabbitBootstrapConfiguration' of type [org.springframework.amqp.rabbit.annotation.RabbitBootstrapConfiguration$$EnhancerBySpringCGLIB$$4c8af597] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+[2021-02-22 15:43:47.710] boot -  INFO [main] --- PostProcessorRegistrationDelegate$BeanPostProcessorChecker:Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$861f3769] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+[2021-02-22 15:43:51.382] boot -  INFO [main] --- RequestMappingHandlerAdapter:Looking for @ControllerAdvice: org.springframework.web.context.support.GenericWebApplicationContext@6302bbb1: startup date [Mon Feb 22 15:43:44 CST 2021]; root of context hierarchy
+[2021-02-22 15:43:51.526] boot -  INFO [main] --- RequestMappingHandlerMapping:Mapped "{[/book/info],methods=[GET]}" onto public com.wangjunyao.middleware.server.entity.Book com.wangjunyao.middleware.server.controller.BookController.info(java.lang.Integer,java.lang.String)
+[2021-02-22 15:43:51.529] boot -  INFO [main] --- RequestMappingHandlerMapping:Mapped "{[/cache/pass/item/info],methods=[GET]}" onto public java.util.Map<java.lang.String, java.lang.Object> com.wangjunyao.middleware.server.controller.redis.CachePassController.getItem(java.lang.String)
+[2021-02-22 15:43:51.532] boot -  INFO [main] --- RequestMappingHandlerMapping:Mapped "{[/red/packet/hand/out],methods=[POST],consumes=[application/json;charset=UTF-8]}" onto public com.wangjunyao.middleware.api.response.BaseResponse com.wangjunyao.middleware.server.controller.redis.RedPacketController.handOut(com.wangjunyao.middleware.server.dto.RedPacketDto,org.springframework.validation.BindingResult)
+[2021-02-22 15:43:51.538] boot -  INFO [main] --- RequestMappingHandlerMapping:Mapped "{[/red/packet/rob],methods=[GET],consumes=[application/json;charset=UTF-8]}" onto public com.wangjunyao.middleware.api.response.BaseResponse com.wangjunyao.middleware.server.controller.redis.RedPacketController.rob(java.lang.Integer,java.lang.String)
+[2021-02-22 15:43:51.541] boot -  INFO [main] --- RequestMappingHandlerMapping:Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+[2021-02-22 15:43:51.542] boot -  INFO [main] --- RequestMappingHandlerMapping:Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+[2021-02-22 15:43:51.672] boot -  INFO [main] --- SimpleUrlHandlerMapping:Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+[2021-02-22 15:43:51.673] boot -  INFO [main] --- SimpleUrlHandlerMapping:Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+[2021-02-22 15:43:51.769] boot -  INFO [main] --- SimpleUrlHandlerMapping:Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+[2021-02-22 15:43:52.720] boot -  INFO [main] --- DefaultLifecycleProcessor:Starting beans in phase 2147483647
+[2021-02-22 15:43:52.737] boot -  INFO [SimpleAsyncTaskExecutor-1] --- CachingConnectionFactory:Attempting to connect to: [127.0.0.1:5672]
+[2021-02-22 15:43:52.903] boot -  INFO [SimpleAsyncTaskExecutor-1] --- CachingConnectionFactory:Created new connection: rabbitConnectionFactory#12a8cc3e:0/SimpleConnection@3b0d59ec [delegate=amqp://guest@127.0.0.1:5672/, localPort= 62991]
+[2021-02-22 15:43:53.371] boot -  INFO [main] --- RabbitmqTest:Started RabbitmqTest in 9.956 seconds (JVM running for 11.625)
+[2021-02-22 15:43:53.544] boot -  INFO [main] --- ModelPublisher:消息模型DirectExchange - one - 生产者 - 发送消息：EventInfo(id=1, module=增删改查模块 - 1, name=基于directExchange的消息模块 - 1, desc=这是基于fanoutExchange的消息模型 - 1)
+[2021-02-22 15:43:53.546] boot -  INFO [main] --- ModelPublisher:消息模型DirectExchange - two - 生产者 - 发送消息：EventInfo(id=2, module=增删改查模块 - 2, name=基于directExchange的消息模块 - 2, desc=这是基于fanoutExchange的消息模型 - 2)
+[2021-02-22 15:43:53.559] boot -  INFO [Thread-2] --- GenericWebApplicationContext:Closing org.springframework.web.context.support.GenericWebApplicationContext@6302bbb1: startup date [Mon Feb 22 15:43:44 CST 2021]; root of context hierarchy
+[2021-02-22 15:43:53.562] boot -  INFO [Thread-2] --- DefaultLifecycleProcessor:Stopping beans in phase 2147483647
+[2021-02-22 15:43:53.571] boot -  INFO [Thread-2] --- SimpleMessageListenerContainer:Waiting for workers to finish.
+[2021-02-22 15:43:53.575] boot -  WARN [SimpleAsyncTaskExecutor-1] --- Jackson2JsonMessageConverter:Could not convert incoming message with content-type [application/octet-stream], 'json' keyword missing.
+[2021-02-22 15:43:53.575] boot -  WARN [SimpleAsyncTaskExecutor-1] --- Jackson2JsonMessageConverter:Could not convert incoming message with content-type [application/octet-stream], 'json' keyword missing.
+[2021-02-22 15:43:53.634] boot -  INFO [SimpleAsyncTaskExecutor-1] --- ModelConsumer:消息模型directExchange - one - 消费者 - 监听消费到消息：EventInfo(id=1, module=增删改查模块 - 1, name=基于directExchange的消息模块 - 1, desc=这是基于fanoutExchange的消息模型 - 1)
+[2021-02-22 15:43:53.634] boot -  INFO [SimpleAsyncTaskExecutor-1] --- ModelConsumer:消息模型directExchange - two - 消费者 - 监听消费到消息：EventInfo(id=2, module=增删改查模块 - 2, name=基于directExchange的消息模块 - 2, desc=这是基于fanoutExchange的消息模型 - 2)
+[2021-02-22 15:43:53.642] boot -  INFO [AMQP Connection 127.0.0.1:5672] --- RabbitmqConfig:消息发送成功：correlationData(null), ack(true), cause(null)
+[2021-02-22 15:43:53.674] boot -  INFO [AMQP Connection 127.0.0.1:5672] --- RabbitmqConfig:消息发送成功：correlationData(null), ack(true), cause(null)
+[2021-02-22 15:43:54.281] boot -  INFO [Thread-2] --- SimpleMessageListenerContainer:Successfully waited for workers to finish.
+[2021-02-22 15:43:54.295] boot -  INFO [Thread-2] --- SimpleMessageListenerContainer:Waiting for workers to finish.
+[2021-02-22 15:43:54.326] boot -  INFO [Thread-2] --- SimpleMessageListenerContainer:Successfully waited for workers to finish.
+[2021-02-22 15:43:54.328] boot -  INFO [Thread-2] --- SimpleMessageListenerContainer:Waiting for workers to finish.
+[2021-02-22 15:43:54.329] boot -  INFO [Thread-2] --- SimpleMessageListenerContainer:Successfully waited for workers to finish.
+[2021-02-22 15:43:54.333] boot -  INFO [Thread-2] --- SimpleMessageListenerContainer:Waiting for workers to finish.
+[2021-02-22 15:43:54.643] boot -  INFO [Thread-2] --- SimpleMessageListenerContainer:Successfully waited for workers to finish.
+[2021-02-22 15:43:54.645] boot -  INFO [Thread-2] --- SimpleMessageListenerContainer:Waiting for workers to finish.
+[2021-02-22 15:43:55.647] boot -  INFO [Thread-2] --- SimpleMessageListenerContainer:Successfully waited for workers to finish.
+[2021-02-22 15:43:55.649] boot -  INFO [Thread-2] --- SimpleMessageListenerContainer:Waiting for workers to finish.
+[2021-02-22 15:43:56.376] boot -  INFO [Thread-2] --- SimpleMessageListenerContainer:Successfully waited for workers to finish.
+[2021-02-22 15:43:56.378] boot -  INFO [Thread-2] --- SimpleMessageListenerContainer:Shutdown ignored - container is not active already
+[2021-02-22 15:43:56.378] boot -  INFO [Thread-2] --- SimpleMessageListenerContainer:Shutdown ignored - container is not active already
+[2021-02-22 15:43:56.378] boot -  INFO [Thread-2] --- SimpleMessageListenerContainer:Shutdown ignored - container is not active already
+[2021-02-22 15:43:56.378] boot -  INFO [Thread-2] --- SimpleMessageListenerContainer:Shutdown ignored - container is not active already
+[2021-02-22 15:43:56.379] boot -  INFO [Thread-2] --- SimpleMessageListenerContainer:Shutdown ignored - container is not active already
+[2021-02-22 15:43:56.379] boot -  INFO [Thread-2] --- SimpleMessageListenerContainer:Shutdown ignored - container is not active already
+[2021-02-22 15:47:53.777] boot -  INFO [main] --- SpringBootTestContextBootstrapper:Neither @ContextConfiguration nor @ContextHierarchy found for test class [com.wangjunyao.middleware.server.RabbitmqTest], using SpringBootContextLoader
+[2021-02-22 15:47:53.786] boot -  INFO [main] --- AbstractContextLoader:Could not detect default resource locations for test class [com.wangjunyao.middleware.server.RabbitmqTest]: no resource found for suffixes {-context.xml, Context.groovy}.
+[2021-02-22 15:47:54.007] boot -  INFO [main] --- SpringBootTestContextBootstrapper:Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener, org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener]
+[2021-02-22 15:47:54.059] boot -  INFO [main] --- SpringBootTestContextBootstrapper:Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@1060b431, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@612679d6, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener@11758f2a, org.springframework.boot.test.autoconfigure.SpringBootDependencyInjectionTestExecutionListener@e720b71, org.springframework.test.context.support.DirtiesContextTestExecutionListener@1b26f7b2, org.springframework.test.context.transaction.TransactionalTestExecutionListener@491cc5c9, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@74ad1f1f, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener@6a1aab78, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener@462d5aee, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener@69b0fd6f, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener@757942a1, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener@4a87761d]
+[2021-02-22 15:47:54.788] boot -  INFO [main] --- RabbitmqTest:Starting RabbitmqTest on 王俊瑶 with PID 4864 (started by wangjunyao in E:\idea-workspace\middleware\server)
+[2021-02-22 15:47:54.789] boot -  INFO [main] --- RabbitmqTest:No active profile set, falling back to default profiles: default
+[2021-02-22 15:47:54.853] boot -  INFO [main] --- GenericWebApplicationContext:Refreshing org.springframework.web.context.support.GenericWebApplicationContext@2a4fb17b: startup date [Mon Feb 22 15:47:54 CST 2021]; root of context hierarchy
+[2021-02-22 15:47:55.910] boot -  INFO [background-preinit] --- Version:HV000001: Hibernate Validator 5.3.6.Final
+[2021-02-22 15:47:56.741] boot -  INFO [main] --- RepositoryConfigurationDelegate:Multiple Spring Data modules found, entering strict repository configuration mode!
+[2021-02-22 15:47:57.556] boot -  INFO [main] --- PostProcessorRegistrationDelegate$BeanPostProcessorChecker:Bean 'org.springframework.amqp.rabbit.annotation.RabbitBootstrapConfiguration' of type [org.springframework.amqp.rabbit.annotation.RabbitBootstrapConfiguration$$EnhancerBySpringCGLIB$$f2730f50] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+[2021-02-22 15:47:57.657] boot -  INFO [main] --- PostProcessorRegistrationDelegate$BeanPostProcessorChecker:Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$2c075122] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+[2021-02-22 15:48:00.410] boot -  INFO [main] --- RequestMappingHandlerAdapter:Looking for @ControllerAdvice: org.springframework.web.context.support.GenericWebApplicationContext@2a4fb17b: startup date [Mon Feb 22 15:47:54 CST 2021]; root of context hierarchy
+[2021-02-22 15:48:00.545] boot -  INFO [main] --- RequestMappingHandlerMapping:Mapped "{[/book/info],methods=[GET]}" onto public com.wangjunyao.middleware.server.entity.Book com.wangjunyao.middleware.server.controller.BookController.info(java.lang.Integer,java.lang.String)
+[2021-02-22 15:48:00.548] boot -  INFO [main] --- RequestMappingHandlerMapping:Mapped "{[/cache/pass/item/info],methods=[GET]}" onto public java.util.Map<java.lang.String, java.lang.Object> com.wangjunyao.middleware.server.controller.redis.CachePassController.getItem(java.lang.String)
+[2021-02-22 15:48:00.551] boot -  INFO [main] --- RequestMappingHandlerMapping:Mapped "{[/red/packet/hand/out],methods=[POST],consumes=[application/json;charset=UTF-8]}" onto public com.wangjunyao.middleware.api.response.BaseResponse com.wangjunyao.middleware.server.controller.redis.RedPacketController.handOut(com.wangjunyao.middleware.server.dto.RedPacketDto,org.springframework.validation.BindingResult)
+[2021-02-22 15:48:00.552] boot -  INFO [main] --- RequestMappingHandlerMapping:Mapped "{[/red/packet/rob],methods=[GET],consumes=[application/json;charset=UTF-8]}" onto public com.wangjunyao.middleware.api.response.BaseResponse com.wangjunyao.middleware.server.controller.redis.RedPacketController.rob(java.lang.Integer,java.lang.String)
+[2021-02-22 15:48:00.554] boot -  INFO [main] --- RequestMappingHandlerMapping:Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+[2021-02-22 15:48:00.555] boot -  INFO [main] --- RequestMappingHandlerMapping:Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+[2021-02-22 15:48:00.635] boot -  INFO [main] --- SimpleUrlHandlerMapping:Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+[2021-02-22 15:48:00.635] boot -  INFO [main] --- SimpleUrlHandlerMapping:Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+[2021-02-22 15:48:00.728] boot -  INFO [main] --- SimpleUrlHandlerMapping:Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+[2021-02-22 15:48:01.725] boot -  INFO [main] --- DefaultLifecycleProcessor:Starting beans in phase 2147483647
+[2021-02-22 15:48:01.774] boot -  INFO [SimpleAsyncTaskExecutor-1] --- CachingConnectionFactory:Attempting to connect to: [127.0.0.1:5672]
+[2021-02-22 15:48:02.073] boot -  INFO [SimpleAsyncTaskExecutor-1] --- CachingConnectionFactory:Created new connection: rabbitConnectionFactory#1a67c1cf:0/SimpleConnection@1b675943 [delegate=amqp://guest@127.0.0.1:5672/, localPort= 63117]
+[2021-02-22 15:48:02.349] boot -  INFO [main] --- RabbitmqTest:Started RabbitmqTest in 8.058 seconds (JVM running for 9.538)
+[2021-02-22 15:48:02.525] boot -  INFO [main] --- ModelPublisher:消息模型DirectExchange - one - 生产者 - 发送消息：EventInfo(id=1, module=增删改查模块 - 1, name=基于directExchange的消息模块 - 1, desc=这是基于fanoutExchange的消息模型 - 1)
+[2021-02-22 15:48:02.526] boot -  INFO [main] --- ModelPublisher:消息模型DirectExchange - two - 生产者 - 发送消息：EventInfo(id=2, module=增删改查模块 - 2, name=基于directExchange的消息模块 - 2, desc=这是基于fanoutExchange的消息模型 - 2)
+[2021-02-22 15:48:02.539] boot -  WARN [SimpleAsyncTaskExecutor-1] --- Jackson2JsonMessageConverter:Could not convert incoming message with content-type [application/octet-stream], 'json' keyword missing.
+[2021-02-22 15:48:02.541] boot -  INFO [Thread-2] --- GenericWebApplicationContext:Closing org.springframework.web.context.support.GenericWebApplicationContext@2a4fb17b: startup date [Mon Feb 22 15:47:54 CST 2021]; root of context hierarchy
+[2021-02-22 15:48:02.543] boot -  INFO [Thread-2] --- DefaultLifecycleProcessor:Stopping beans in phase 2147483647
+[2021-02-22 15:48:02.539] boot -  WARN [SimpleAsyncTaskExecutor-1] --- Jackson2JsonMessageConverter:Could not convert incoming message with content-type [application/octet-stream], 'json' keyword missing.
+[2021-02-22 15:48:02.552] boot -  INFO [Thread-2] --- SimpleMessageListenerContainer:Waiting for workers to finish.
+[2021-02-22 15:48:02.618] boot -  INFO [SimpleAsyncTaskExecutor-1] --- ModelConsumer:消息模型directExchange - one - 消费者 - 监听消费到消息：EventInfo(id=1, module=增删改查模块 - 1, name=基于directExchange的消息模块 - 1, desc=这是基于fanoutExchange的消息模型 - 1)
+[2021-02-22 15:48:02.618] boot -  INFO [SimpleAsyncTaskExecutor-1] --- ModelConsumer:消息模型directExchange - two - 消费者 - 监听消费到消息：EventInfo(id=2, module=增删改查模块 - 2, name=基于directExchange的消息模块 - 2, desc=这是基于fanoutExchange的消息模型 - 2)
+[2021-02-22 15:48:02.620] boot -  INFO [AMQP Connection 127.0.0.1:5672] --- RabbitmqConfig:消息发送成功：correlationData(null), ack(true), cause(null)
+[2021-02-22 15:48:02.641] boot -  INFO [AMQP Connection 127.0.0.1:5672] --- RabbitmqConfig:消息发送成功：correlationData(null), ack(true), cause(null)
+[2021-02-22 15:48:03.303] boot -  INFO [Thread-2] --- SimpleMessageListenerContainer:Successfully waited for workers to finish.
+[2021-02-22 15:48:03.315] boot -  INFO [Thread-2] --- SimpleMessageListenerContainer:Waiting for workers to finish.
+[2021-02-22 15:48:03.316] boot -  INFO [Thread-2] --- SimpleMessageListenerContainer:Successfully waited for workers to finish.
+[2021-02-22 15:48:03.320] boot -  INFO [Thread-2] --- SimpleMessageListenerContainer:Waiting for workers to finish.
+[2021-02-22 15:48:04.316] boot -  INFO [Thread-2] --- SimpleMessageListenerContainer:Successfully waited for workers to finish.
+[2021-02-22 15:48:04.318] boot -  INFO [Thread-2] --- SimpleMessageListenerContainer:Waiting for workers to finish.
+[2021-02-22 15:48:04.628] boot -  INFO [Thread-2] --- SimpleMessageListenerContainer:Successfully waited for workers to finish.
+[2021-02-22 15:48:04.630] boot -  INFO [Thread-2] --- SimpleMessageListenerContainer:Waiting for workers to finish.
+[2021-02-22 15:48:05.348] boot -  INFO [Thread-2] --- SimpleMessageListenerContainer:Successfully waited for workers to finish.
+[2021-02-22 15:48:05.351] boot -  INFO [Thread-2] --- SimpleMessageListenerContainer:Waiting for workers to finish.
+[2021-02-22 15:48:06.358] boot -  INFO [Thread-2] --- SimpleMessageListenerContainer:Successfully waited for workers to finish.
+[2021-02-22 15:48:06.359] boot -  INFO [Thread-2] --- SimpleMessageListenerContainer:Waiting for workers to finish.
+[2021-02-22 15:48:06.640] boot -  INFO [Thread-2] --- SimpleMessageListenerContainer:Successfully waited for workers to finish.
+[2021-02-22 15:48:06.642] boot -  INFO [Thread-2] --- SimpleMessageListenerContainer:Shutdown ignored - container is not active already
+[2021-02-22 15:48:06.643] boot -  INFO [Thread-2] --- SimpleMessageListenerContainer:Shutdown ignored - container is not active already
+[2021-02-22 15:48:06.643] boot -  INFO [Thread-2] --- SimpleMessageListenerContainer:Shutdown ignored - container is not active already
+[2021-02-22 15:48:06.643] boot -  INFO [Thread-2] --- SimpleMessageListenerContainer:Shutdown ignored - container is not active already
+[2021-02-22 15:48:06.643] boot -  INFO [Thread-2] --- SimpleMessageListenerContainer:Shutdown ignored - container is not active already
+[2021-02-22 15:48:06.643] boot -  INFO [Thread-2] --- SimpleMessageListenerContainer:Shutdown ignored - container is not active already
+[2021-02-22 15:48:06.643] boot -  INFO [Thread-2] --- SimpleMessageListenerContainer:Shutdown ignored - container is not active already
+[2021-02-22 15:49:17.130] boot -  INFO [main] --- SpringBootTestContextBootstrapper:Neither @ContextConfiguration nor @ContextHierarchy found for test class [com.wangjunyao.middleware.server.RabbitmqTest], using SpringBootContextLoader
+[2021-02-22 15:49:17.144] boot -  INFO [main] --- AbstractContextLoader:Could not detect default resource locations for test class [com.wangjunyao.middleware.server.RabbitmqTest]: no resource found for suffixes {-context.xml, Context.groovy}.
+[2021-02-22 15:49:17.333] boot -  INFO [main] --- SpringBootTestContextBootstrapper:Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener, org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener]
+[2021-02-22 15:49:17.380] boot -  INFO [main] --- SpringBootTestContextBootstrapper:Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@4eb7f003, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@eafc191, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener@612fc6eb, org.springframework.boot.test.autoconfigure.SpringBootDependencyInjectionTestExecutionListener@1060b431, org.springframework.test.context.support.DirtiesContextTestExecutionListener@612679d6, org.springframework.test.context.transaction.TransactionalTestExecutionListener@11758f2a, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@e720b71, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener@1b26f7b2, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener@491cc5c9, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener@74ad1f1f, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener@6a1aab78, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener@462d5aee]
+[2021-02-22 15:49:18.103] boot -  INFO [main] --- RabbitmqTest:Starting RabbitmqTest on 王俊瑶 with PID 6572 (started by wangjunyao in E:\idea-workspace\middleware\server)
+[2021-02-22 15:49:18.103] boot -  INFO [main] --- RabbitmqTest:No active profile set, falling back to default profiles: default
+[2021-02-22 15:49:18.171] boot -  INFO [main] --- GenericWebApplicationContext:Refreshing org.springframework.web.context.support.GenericWebApplicationContext@6302bbb1: startup date [Mon Feb 22 15:49:18 CST 2021]; root of context hierarchy
+[2021-02-22 15:49:19.198] boot -  INFO [background-preinit] --- Version:HV000001: Hibernate Validator 5.3.6.Final
+[2021-02-22 15:49:20.094] boot -  INFO [main] --- RepositoryConfigurationDelegate:Multiple Spring Data modules found, entering strict repository configuration mode!
+[2021-02-22 15:49:21.038] boot -  INFO [main] --- PostProcessorRegistrationDelegate$BeanPostProcessorChecker:Bean 'org.springframework.amqp.rabbit.annotation.RabbitBootstrapConfiguration' of type [org.springframework.amqp.rabbit.annotation.RabbitBootstrapConfiguration$$EnhancerBySpringCGLIB$$53be235b] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+[2021-02-22 15:49:21.133] boot -  INFO [main] --- PostProcessorRegistrationDelegate$BeanPostProcessorChecker:Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$8d52652d] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+[2021-02-22 15:49:24.056] boot -  INFO [main] --- RequestMappingHandlerAdapter:Looking for @ControllerAdvice: org.springframework.web.context.support.GenericWebApplicationContext@6302bbb1: startup date [Mon Feb 22 15:49:18 CST 2021]; root of context hierarchy
+[2021-02-22 15:49:24.194] boot -  INFO [main] --- RequestMappingHandlerMapping:Mapped "{[/book/info],methods=[GET]}" onto public com.wangjunyao.middleware.server.entity.Book com.wangjunyao.middleware.server.controller.BookController.info(java.lang.Integer,java.lang.String)
+[2021-02-22 15:49:24.196] boot -  INFO [main] --- RequestMappingHandlerMapping:Mapped "{[/cache/pass/item/info],methods=[GET]}" onto public java.util.Map<java.lang.String, java.lang.Object> com.wangjunyao.middleware.server.controller.redis.CachePassController.getItem(java.lang.String)
+[2021-02-22 15:49:24.199] boot -  INFO [main] --- RequestMappingHandlerMapping:Mapped "{[/red/packet/rob],methods=[GET],consumes=[application/json;charset=UTF-8]}" onto public com.wangjunyao.middleware.api.response.BaseResponse com.wangjunyao.middleware.server.controller.redis.RedPacketController.rob(java.lang.Integer,java.lang.String)
+[2021-02-22 15:49:24.201] boot -  INFO [main] --- RequestMappingHandlerMapping:Mapped "{[/red/packet/hand/out],methods=[POST],consumes=[application/json;charset=UTF-8]}" onto public com.wangjunyao.middleware.api.response.BaseResponse com.wangjunyao.middleware.server.controller.redis.RedPacketController.handOut(com.wangjunyao.middleware.server.dto.RedPacketDto,org.springframework.validation.BindingResult)
+[2021-02-22 15:49:24.205] boot -  INFO [main] --- RequestMappingHandlerMapping:Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+[2021-02-22 15:49:24.206] boot -  INFO [main] --- RequestMappingHandlerMapping:Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+[2021-02-22 15:49:24.285] boot -  INFO [main] --- SimpleUrlHandlerMapping:Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+[2021-02-22 15:49:24.285] boot -  INFO [main] --- SimpleUrlHandlerMapping:Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+[2021-02-22 15:49:24.375] boot -  INFO [main] --- SimpleUrlHandlerMapping:Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+[2021-02-22 15:49:25.141] boot -  INFO [main] --- DefaultLifecycleProcessor:Starting beans in phase 2147483647
+[2021-02-22 15:49:25.155] boot -  INFO [SimpleAsyncTaskExecutor-1] --- CachingConnectionFactory:Attempting to connect to: [127.0.0.1:5672]
+[2021-02-22 15:49:25.272] boot -  INFO [SimpleAsyncTaskExecutor-1] --- CachingConnectionFactory:Created new connection: rabbitConnectionFactory#6564bdec:0/SimpleConnection@5bd1a68e [delegate=amqp://guest@127.0.0.1:5672/, localPort= 63164]
+[2021-02-22 15:49:26.708] boot -  INFO [main] --- RabbitmqTest:Started RabbitmqTest in 9.093 seconds (JVM running for 10.618)
+[2021-02-22 15:49:26.940] boot -  INFO [main] --- ModelPublisher:消息模型DirectExchange - one - 生产者 - 发送消息：EventInfo(id=1, module=增删改查模块 - 1, name=基于directExchange的消息模块 - 1, desc=这是基于fanoutExchange的消息模型 - 1)
+[2021-02-22 15:49:26.941] boot -  INFO [main] --- ModelPublisher:消息模型DirectExchange - two - 生产者 - 发送消息：EventInfo(id=2, module=增删改查模块 - 2, name=基于directExchange的消息模块 - 2, desc=这是基于fanoutExchange的消息模型 - 2)
+[2021-02-22 15:49:26.962] boot -  INFO [Thread-2] --- GenericWebApplicationContext:Closing org.springframework.web.context.support.GenericWebApplicationContext@6302bbb1: startup date [Mon Feb 22 15:49:18 CST 2021]; root of context hierarchy
+[2021-02-22 15:49:26.965] boot -  INFO [Thread-2] --- DefaultLifecycleProcessor:Stopping beans in phase 2147483647
+[2021-02-22 15:49:26.976] boot -  WARN [SimpleAsyncTaskExecutor-1] --- Jackson2JsonMessageConverter:Could not convert incoming message with content-type [application/octet-stream], 'json' keyword missing.
+[2021-02-22 15:49:26.977] boot -  WARN [SimpleAsyncTaskExecutor-1] --- Jackson2JsonMessageConverter:Could not convert incoming message with content-type [application/octet-stream], 'json' keyword missing.
+[2021-02-22 15:49:26.977] boot -  WARN [SimpleAsyncTaskExecutor-1] --- Jackson2JsonMessageConverter:Could not convert incoming message with content-type [application/octet-stream], 'json' keyword missing.
+[2021-02-22 15:49:26.979] boot -  INFO [Thread-2] --- SimpleMessageListenerContainer:Waiting for workers to finish.
+[2021-02-22 15:49:27.043] boot -  INFO [SimpleAsyncTaskExecutor-1] --- ModelConsumer:消息模型directExchange - three - 消费者 - 监听消费到消息：EventInfo(id=2, module=增删改查模块 - 2, name=基于directExchange的消息模块 - 2, desc=这是基于fanoutExchange的消息模型 - 2)
+[2021-02-22 15:49:27.043] boot -  INFO [SimpleAsyncTaskExecutor-1] --- ModelConsumer:消息模型directExchange - one - 消费者 - 监听消费到消息：EventInfo(id=1, module=增删改查模块 - 1, name=基于directExchange的消息模块 - 1, desc=这是基于fanoutExchange的消息模型 - 1)
+[2021-02-22 15:49:27.043] boot -  INFO [SimpleAsyncTaskExecutor-1] --- ModelConsumer:消息模型directExchange - two - 消费者 - 监听消费到消息：EventInfo(id=2, module=增删改查模块 - 2, name=基于directExchange的消息模块 - 2, desc=这是基于fanoutExchange的消息模型 - 2)
+[2021-02-22 15:49:27.659] boot -  INFO [Thread-2] --- SimpleMessageListenerContainer:Successfully waited for workers to finish.
+[2021-02-22 15:49:27.664] boot -  INFO [Thread-2] --- SimpleMessageListenerContainer:Waiting for workers to finish.
+[2021-02-22 15:49:27.672] boot -  INFO [Thread-2] --- SimpleMessageListenerContainer:Successfully waited for workers to finish.
+[2021-02-22 15:49:27.674] boot -  INFO [Thread-2] --- SimpleMessageListenerContainer:Waiting for workers to finish.
+[2021-02-22 15:49:27.793] boot -  INFO [AMQP Connection 127.0.0.1:5672] --- RabbitmqConfig:消息发送成功：correlationData(null), ack(true), cause(null)
+[2021-02-22 15:49:27.881] boot -  INFO [AMQP Connection 127.0.0.1:5672] --- RabbitmqConfig:消息发送成功：correlationData(null), ack(true), cause(null)
+[2021-02-22 15:49:28.678] boot -  INFO [Thread-2] --- SimpleMessageListenerContainer:Successfully waited for workers to finish.
+[2021-02-22 15:49:28.685] boot -  INFO [Thread-2] --- SimpleMessageListenerContainer:Waiting for workers to finish.
+[2021-02-22 15:49:29.693] boot -  INFO [Thread-2] --- SimpleMessageListenerContainer:Successfully waited for workers to finish.
+[2021-02-22 15:49:29.695] boot -  INFO [Thread-2] --- SimpleMessageListenerContainer:Waiting for workers to finish.
+[2021-02-22 15:49:30.055] boot -  INFO [Thread-2] --- SimpleMessageListenerContainer:Successfully waited for workers to finish.
+[2021-02-22 15:49:30.057] boot -  INFO [Thread-2] --- SimpleMessageListenerContainer:Waiting for workers to finish.
+[2021-02-22 15:49:31.066] boot -  INFO [Thread-2] --- SimpleMessageListenerContainer:Successfully waited for workers to finish.
+[2021-02-22 15:49:31.069] boot -  INFO [Thread-2] --- SimpleMessageListenerContainer:Waiting for workers to finish.
+[2021-02-22 15:49:32.066] boot -  INFO [Thread-2] --- SimpleMessageListenerContainer:Successfully waited for workers to finish.
+[2021-02-22 15:49:32.067] boot -  INFO [Thread-2] --- SimpleMessageListenerContainer:Shutdown ignored - container is not active already
+[2021-02-22 15:49:32.068] boot -  INFO [Thread-2] --- SimpleMessageListenerContainer:Shutdown ignored - container is not active already
+[2021-02-22 15:49:32.068] boot -  INFO [Thread-2] --- SimpleMessageListenerContainer:Shutdown ignored - container is not active already
+[2021-02-22 15:49:32.068] boot -  INFO [Thread-2] --- SimpleMessageListenerContainer:Shutdown ignored - container is not active already
+[2021-02-22 15:49:32.068] boot -  INFO [Thread-2] --- SimpleMessageListenerContainer:Shutdown ignored - container is not active already
+[2021-02-22 15:49:32.068] boot -  INFO [Thread-2] --- SimpleMessageListenerContainer:Shutdown ignored - container is not active already
+[2021-02-22 15:49:32.069] boot -  INFO [Thread-2] --- SimpleMessageListenerContainer:Shutdown ignored - container is not active already
+[2021-02-22 17:26:10.566] boot -  INFO [main] --- SpringBootTestContextBootstrapper:Neither @ContextConfiguration nor @ContextHierarchy found for test class [com.wangjunyao.middleware.server.RabbitmqTest], using SpringBootContextLoader
+[2021-02-22 17:26:10.574] boot -  INFO [main] --- AbstractContextLoader:Could not detect default resource locations for test class [com.wangjunyao.middleware.server.RabbitmqTest]: no resource found for suffixes {-context.xml, Context.groovy}.
+[2021-02-22 17:26:10.748] boot -  INFO [main] --- SpringBootTestContextBootstrapper:Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener, org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener]
+[2021-02-22 17:26:10.794] boot -  INFO [main] --- SpringBootTestContextBootstrapper:Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@1060b431, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@612679d6, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener@11758f2a, org.springframework.boot.test.autoconfigure.SpringBootDependencyInjectionTestExecutionListener@e720b71, org.springframework.test.context.support.DirtiesContextTestExecutionListener@1b26f7b2, org.springframework.test.context.transaction.TransactionalTestExecutionListener@491cc5c9, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@74ad1f1f, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener@6a1aab78, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener@462d5aee, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener@69b0fd6f, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener@757942a1, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener@4a87761d]
+[2021-02-22 17:26:11.862] boot -  INFO [main] --- RabbitmqTest:Starting RabbitmqTest on 王俊瑶 with PID 8196 (started by wangjunyao in E:\idea-workspace\middleware\server)
+[2021-02-22 17:26:11.863] boot -  INFO [main] --- RabbitmqTest:No active profile set, falling back to default profiles: default
+[2021-02-22 17:26:12.069] boot -  INFO [main] --- GenericWebApplicationContext:Refreshing org.springframework.web.context.support.GenericWebApplicationContext@2a4fb17b: startup date [Mon Feb 22 17:26:12 CST 2021]; root of context hierarchy
+[2021-02-22 17:26:13.244] boot -  INFO [background-preinit] --- Version:HV000001: Hibernate Validator 5.3.6.Final
+[2021-02-22 17:26:13.910] boot -  INFO [main] --- RepositoryConfigurationDelegate:Multiple Spring Data modules found, entering strict repository configuration mode!
+[2021-02-22 17:26:15.281] boot -  INFO [main] --- PostProcessorRegistrationDelegate$BeanPostProcessorChecker:Bean 'org.springframework.amqp.rabbit.annotation.RabbitBootstrapConfiguration' of type [org.springframework.amqp.rabbit.annotation.RabbitBootstrapConfiguration$$EnhancerBySpringCGLIB$$ad017439] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+[2021-02-22 17:26:15.379] boot -  INFO [main] --- PostProcessorRegistrationDelegate$BeanPostProcessorChecker:Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$e695b60b] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+[2021-02-22 17:26:19.722] boot -  INFO [main] --- RequestMappingHandlerAdapter:Looking for @ControllerAdvice: org.springframework.web.context.support.GenericWebApplicationContext@2a4fb17b: startup date [Mon Feb 22 17:26:12 CST 2021]; root of context hierarchy
+[2021-02-22 17:26:19.839] boot -  INFO [main] --- RequestMappingHandlerMapping:Mapped "{[/book/info],methods=[GET]}" onto public com.wangjunyao.middleware.server.entity.Book com.wangjunyao.middleware.server.controller.BookController.info(java.lang.Integer,java.lang.String)
+[2021-02-22 17:26:19.840] boot -  INFO [main] --- RequestMappingHandlerMapping:Mapped "{[/cache/pass/item/info],methods=[GET]}" onto public java.util.Map<java.lang.String, java.lang.Object> com.wangjunyao.middleware.server.controller.redis.CachePassController.getItem(java.lang.String)
+[2021-02-22 17:26:19.844] boot -  INFO [main] --- RequestMappingHandlerMapping:Mapped "{[/red/packet/rob],methods=[GET],consumes=[application/json;charset=UTF-8]}" onto public com.wangjunyao.middleware.api.response.BaseResponse com.wangjunyao.middleware.server.controller.redis.RedPacketController.rob(java.lang.Integer,java.lang.String)
+[2021-02-22 17:26:19.845] boot -  INFO [main] --- RequestMappingHandlerMapping:Mapped "{[/red/packet/hand/out],methods=[POST],consumes=[application/json;charset=UTF-8]}" onto public com.wangjunyao.middleware.api.response.BaseResponse com.wangjunyao.middleware.server.controller.redis.RedPacketController.handOut(com.wangjunyao.middleware.server.dto.RedPacketDto,org.springframework.validation.BindingResult)
+[2021-02-22 17:26:19.847] boot -  INFO [main] --- RequestMappingHandlerMapping:Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+[2021-02-22 17:26:19.848] boot -  INFO [main] --- RequestMappingHandlerMapping:Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+[2021-02-22 17:26:19.919] boot -  INFO [main] --- SimpleUrlHandlerMapping:Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+[2021-02-22 17:26:19.920] boot -  INFO [main] --- SimpleUrlHandlerMapping:Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+[2021-02-22 17:26:20.094] boot -  INFO [main] --- SimpleUrlHandlerMapping:Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+[2021-02-22 17:26:21.077] boot -  INFO [main] --- DefaultLifecycleProcessor:Starting beans in phase 2147483647
+[2021-02-22 17:26:21.093] boot -  INFO [SimpleAsyncTaskExecutor-1] --- CachingConnectionFactory:Attempting to connect to: [127.0.0.1:5672]
+[2021-02-22 17:26:21.233] boot -  INFO [SimpleAsyncTaskExecutor-1] --- CachingConnectionFactory:Created new connection: rabbitConnectionFactory#3d416325:0/SimpleConnection@88ef4f5 [delegate=amqp://guest@127.0.0.1:5672/, localPort= 49844]
+[2021-02-22 17:26:21.802] boot -  INFO [main] --- RabbitmqTest:Started RabbitmqTest in 10.713 seconds (JVM running for 12.199)
+[2021-02-22 17:26:21.925] boot -  INFO [main] --- ModelPublisher:消息模型topicExchange - 生产者 - 发送消息：这是TopicExchange消息模型的消息 路由：local.middleware.mq.topic.routing.java.key
+[2021-02-22 17:26:21.972] boot -  INFO [Thread-2] --- GenericWebApplicationContext:Closing org.springframework.web.context.support.GenericWebApplicationContext@2a4fb17b: startup date [Mon Feb 22 17:26:12 CST 2021]; root of context hierarchy
+[2021-02-22 17:26:21.983] boot -  INFO [Thread-2] --- DefaultLifecycleProcessor:Stopping beans in phase 2147483647
+[2021-02-22 17:26:21.989] boot -  INFO [Thread-2] --- SimpleMessageListenerContainer:Waiting for workers to finish.
+[2021-02-22 17:26:22.007] boot -  WARN [SimpleAsyncTaskExecutor-1] --- Jackson2JsonMessageConverter:Could not convert incoming message with content-type [application/octet-stream], 'json' keyword missing.
+[2021-02-22 17:26:22.016] boot -  INFO [SimpleAsyncTaskExecutor-1] --- ModelConsumer:消息模型topicExchange - * - 消费者 - 监听消费到消息 - 1：这是TopicExchange消息模型的消息
+[2021-02-22 17:26:22.120] boot -  INFO [AMQP Connection 127.0.0.1:5672] --- RabbitmqConfig:消息发送成功：correlationData(null), ack(true), cause(null)
+[2021-02-22 17:26:22.753] boot -  INFO [Thread-2] --- SimpleMessageListenerContainer:Successfully waited for workers to finish.
+[2021-02-22 17:26:22.756] boot -  INFO [Thread-2] --- SimpleMessageListenerContainer:Waiting for workers to finish.
+[2021-02-22 17:26:22.765] boot -  INFO [Thread-2] --- SimpleMessageListenerContainer:Successfully waited for workers to finish.
+[2021-02-22 17:26:22.767] boot -  INFO [Thread-2] --- SimpleMessageListenerContainer:Waiting for workers to finish.
+[2021-02-22 17:26:23.769] boot -  INFO [Thread-2] --- SimpleMessageListenerContainer:Successfully waited for workers to finish.
+[2021-02-22 17:26:23.772] boot -  INFO [Thread-2] --- SimpleMessageListenerContainer:Waiting for workers to finish.
+[2021-02-22 17:26:24.035] boot -  INFO [Thread-2] --- SimpleMessageListenerContainer:Successfully waited for workers to finish.
+[2021-02-22 17:26:24.037] boot -  INFO [Thread-2] --- SimpleMessageListenerContainer:Waiting for workers to finish.
+[2021-02-22 17:26:24.790] boot -  INFO [Thread-2] --- SimpleMessageListenerContainer:Successfully waited for workers to finish.
+[2021-02-22 17:26:24.798] boot -  INFO [Thread-2] --- SimpleMessageListenerContainer:Waiting for workers to finish.
+[2021-02-22 17:26:25.798] boot -  INFO [Thread-2] --- SimpleMessageListenerContainer:Successfully waited for workers to finish.
+[2021-02-22 17:26:25.800] boot -  INFO [Thread-2] --- SimpleMessageListenerContainer:Waiting for workers to finish.
+[2021-02-22 17:26:26.802] boot -  INFO [Thread-2] --- SimpleMessageListenerContainer:Successfully waited for workers to finish.
+[2021-02-22 17:26:26.804] boot -  INFO [Thread-2] --- SimpleMessageListenerContainer:Waiting for workers to finish.
+[2021-02-22 17:26:27.808] boot -  INFO [Thread-2] --- SimpleMessageListenerContainer:Successfully waited for workers to finish.
+[2021-02-22 17:26:27.811] boot -  INFO [Thread-2] --- SimpleMessageListenerContainer:Waiting for workers to finish.
+[2021-02-22 17:26:27.825] boot -  INFO [Thread-2] --- SimpleMessageListenerContainer:Successfully waited for workers to finish.
+[2021-02-22 17:26:27.827] boot -  INFO [Thread-2] --- SimpleMessageListenerContainer:Shutdown ignored - container is not active already
+[2021-02-22 17:26:27.828] boot -  INFO [Thread-2] --- SimpleMessageListenerContainer:Shutdown ignored - container is not active already
+[2021-02-22 17:26:27.828] boot -  INFO [Thread-2] --- SimpleMessageListenerContainer:Shutdown ignored - container is not active already
+[2021-02-22 17:26:27.828] boot -  INFO [Thread-2] --- SimpleMessageListenerContainer:Shutdown ignored - container is not active already
+[2021-02-22 17:26:27.828] boot -  INFO [Thread-2] --- SimpleMessageListenerContainer:Shutdown ignored - container is not active already
+[2021-02-22 17:26:27.828] boot -  INFO [Thread-2] --- SimpleMessageListenerContainer:Shutdown ignored - container is not active already
+[2021-02-22 17:26:27.829] boot -  INFO [Thread-2] --- SimpleMessageListenerContainer:Shutdown ignored - container is not active already
+[2021-02-22 17:26:27.829] boot -  INFO [Thread-2] --- SimpleMessageListenerContainer:Shutdown ignored - container is not active already
+[2021-02-22 17:26:27.829] boot -  INFO [Thread-2] --- SimpleMessageListenerContainer:Shutdown ignored - container is not active already
+[2021-02-22 17:27:37.861] boot -  INFO [main] --- SpringBootTestContextBootstrapper:Neither @ContextConfiguration nor @ContextHierarchy found for test class [com.wangjunyao.middleware.server.RabbitmqTest], using SpringBootContextLoader
+[2021-02-22 17:27:37.869] boot -  INFO [main] --- AbstractContextLoader:Could not detect default resource locations for test class [com.wangjunyao.middleware.server.RabbitmqTest]: no resource found for suffixes {-context.xml, Context.groovy}.
+[2021-02-22 17:27:38.065] boot -  INFO [main] --- SpringBootTestContextBootstrapper:Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener, org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener]
+[2021-02-22 17:27:38.139] boot -  INFO [main] --- SpringBootTestContextBootstrapper:Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@1060b431, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@612679d6, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener@11758f2a, org.springframework.boot.test.autoconfigure.SpringBootDependencyInjectionTestExecutionListener@e720b71, org.springframework.test.context.support.DirtiesContextTestExecutionListener@1b26f7b2, org.springframework.test.context.transaction.TransactionalTestExecutionListener@491cc5c9, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@74ad1f1f, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener@6a1aab78, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener@462d5aee, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener@69b0fd6f, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener@757942a1, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener@4a87761d]
+[2021-02-22 17:27:38.925] boot -  INFO [main] --- RabbitmqTest:Starting RabbitmqTest on 王俊瑶 with PID 12576 (started by wangjunyao in E:\idea-workspace\middleware\server)
+[2021-02-22 17:27:38.926] boot -  INFO [main] --- RabbitmqTest:No active profile set, falling back to default profiles: default
+[2021-02-22 17:27:38.995] boot -  INFO [main] --- GenericWebApplicationContext:Refreshing org.springframework.web.context.support.GenericWebApplicationContext@2a4fb17b: startup date [Mon Feb 22 17:27:38 CST 2021]; root of context hierarchy
+[2021-02-22 17:27:39.913] boot -  INFO [background-preinit] --- Version:HV000001: Hibernate Validator 5.3.6.Final
+[2021-02-22 17:27:40.830] boot -  INFO [main] --- RepositoryConfigurationDelegate:Multiple Spring Data modules found, entering strict repository configuration mode!
+[2021-02-22 17:27:41.605] boot -  INFO [main] --- PostProcessorRegistrationDelegate$BeanPostProcessorChecker:Bean 'org.springframework.amqp.rabbit.annotation.RabbitBootstrapConfiguration' of type [org.springframework.amqp.rabbit.annotation.RabbitBootstrapConfiguration$$EnhancerBySpringCGLIB$$ad017439] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+[2021-02-22 17:27:41.688] boot -  INFO [main] --- PostProcessorRegistrationDelegate$BeanPostProcessorChecker:Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$e695b60b] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+[2021-02-22 17:27:44.543] boot -  INFO [main] --- RequestMappingHandlerAdapter:Looking for @ControllerAdvice: org.springframework.web.context.support.GenericWebApplicationContext@2a4fb17b: startup date [Mon Feb 22 17:27:38 CST 2021]; root of context hierarchy
+[2021-02-22 17:27:44.668] boot -  INFO [main] --- RequestMappingHandlerMapping:Mapped "{[/book/info],methods=[GET]}" onto public com.wangjunyao.middleware.server.entity.Book com.wangjunyao.middleware.server.controller.BookController.info(java.lang.Integer,java.lang.String)
+[2021-02-22 17:27:44.671] boot -  INFO [main] --- RequestMappingHandlerMapping:Mapped "{[/cache/pass/item/info],methods=[GET]}" onto public java.util.Map<java.lang.String, java.lang.Object> com.wangjunyao.middleware.server.controller.redis.CachePassController.getItem(java.lang.String)
+[2021-02-22 17:27:44.674] boot -  INFO [main] --- RequestMappingHandlerMapping:Mapped "{[/red/packet/hand/out],methods=[POST],consumes=[application/json;charset=UTF-8]}" onto public com.wangjunyao.middleware.api.response.BaseResponse com.wangjunyao.middleware.server.controller.redis.RedPacketController.handOut(com.wangjunyao.middleware.server.dto.RedPacketDto,org.springframework.validation.BindingResult)
+[2021-02-22 17:27:44.675] boot -  INFO [main] --- RequestMappingHandlerMapping:Mapped "{[/red/packet/rob],methods=[GET],consumes=[application/json;charset=UTF-8]}" onto public com.wangjunyao.middleware.api.response.BaseResponse com.wangjunyao.middleware.server.controller.redis.RedPacketController.rob(java.lang.Integer,java.lang.String)
+[2021-02-22 17:27:44.678] boot -  INFO [main] --- RequestMappingHandlerMapping:Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+[2021-02-22 17:27:44.679] boot -  INFO [main] --- RequestMappingHandlerMapping:Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+[2021-02-22 17:27:44.766] boot -  INFO [main] --- SimpleUrlHandlerMapping:Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+[2021-02-22 17:27:44.767] boot -  INFO [main] --- SimpleUrlHandlerMapping:Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+[2021-02-22 17:27:44.900] boot -  INFO [main] --- SimpleUrlHandlerMapping:Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+[2021-02-22 17:27:45.665] boot -  INFO [main] --- DefaultLifecycleProcessor:Starting beans in phase 2147483647
+[2021-02-22 17:27:45.679] boot -  INFO [SimpleAsyncTaskExecutor-1] --- CachingConnectionFactory:Attempting to connect to: [127.0.0.1:5672]
+[2021-02-22 17:27:45.808] boot -  INFO [SimpleAsyncTaskExecutor-1] --- CachingConnectionFactory:Created new connection: rabbitConnectionFactory#25ee46f5:0/SimpleConnection@1e6328f7 [delegate=amqp://guest@127.0.0.1:5672/, localPort= 49892]
+[2021-02-22 17:27:45.969] boot -  INFO [main] --- RabbitmqTest:Started RabbitmqTest in 7.555 seconds (JVM running for 9.078)
+[2021-02-22 17:27:46.055] boot -  INFO [main] --- ModelPublisher:消息模型topicExchange - 生产者 - 发送消息：这是TopicExchange消息模型的消息 路由：local.middleware.mq.topic.routing.php.python.key
+[2021-02-22 17:27:46.065] boot -  WARN [SimpleAsyncTaskExecutor-1] --- Jackson2JsonMessageConverter:Could not convert incoming message with content-type [application/octet-stream], 'json' keyword missing.
+[2021-02-22 17:27:46.070] boot -  INFO [Thread-2] --- GenericWebApplicationContext:Closing org.springframework.web.context.support.GenericWebApplicationContext@2a4fb17b: startup date [Mon Feb 22 17:27:38 CST 2021]; root of context hierarchy
+[2021-02-22 17:27:46.074] boot -  INFO [Thread-2] --- DefaultLifecycleProcessor:Stopping beans in phase 2147483647
+[2021-02-22 17:27:46.077] boot -  INFO [SimpleAsyncTaskExecutor-1] --- ModelConsumer:消息模型topicExchange - * - 消费者 - 监听消费到消息：这是TopicExchange消息模型的消息
+[2021-02-22 17:27:46.083] boot -  INFO [Thread-2] --- SimpleMessageListenerContainer:Waiting for workers to finish.
+[2021-02-22 17:27:46.900] boot -  INFO [Thread-2] --- SimpleMessageListenerContainer:Successfully waited for workers to finish.
+[2021-02-22 17:27:46.902] boot -  INFO [Thread-2] --- SimpleMessageListenerContainer:Waiting for workers to finish.
+[2021-02-22 17:27:46.913] boot -  INFO [AMQP Connection 127.0.0.1:5672] --- RabbitmqConfig:消息发送成功：correlationData(null), ack(true), cause(null)
+[2021-02-22 17:27:46.929] boot -  INFO [Thread-2] --- SimpleMessageListenerContainer:Successfully waited for workers to finish.
+[2021-02-22 17:27:46.930] boot -  INFO [Thread-2] --- SimpleMessageListenerContainer:Waiting for workers to finish.
+[2021-02-22 17:27:46.944] boot -  INFO [Thread-2] --- SimpleMessageListenerContainer:Successfully waited for workers to finish.
+[2021-02-22 17:27:46.952] boot -  INFO [Thread-2] --- SimpleMessageListenerContainer:Waiting for workers to finish.
+[2021-02-22 17:27:47.087] boot -  INFO [Thread-2] --- SimpleMessageListenerContainer:Successfully waited for workers to finish.
+[2021-02-22 17:27:47.089] boot -  INFO [Thread-2] --- SimpleMessageListenerContainer:Waiting for workers to finish.
+[2021-02-22 17:27:47.950] boot -  INFO [Thread-2] --- SimpleMessageListenerContainer:Successfully waited for workers to finish.
+[2021-02-22 17:27:47.952] boot -  INFO [Thread-2] --- SimpleMessageListenerContainer:Waiting for workers to finish.
+[2021-02-22 17:27:48.961] boot -  INFO [Thread-2] --- SimpleMessageListenerContainer:Successfully waited for workers to finish.
+[2021-02-22 17:27:48.963] boot -  INFO [Thread-2] --- SimpleMessageListenerContainer:Waiting for workers to finish.
+[2021-02-22 17:27:48.976] boot -  INFO [Thread-2] --- SimpleMessageListenerContainer:Successfully waited for workers to finish.
+[2021-02-22 17:27:48.978] boot -  INFO [Thread-2] --- SimpleMessageListenerContainer:Waiting for workers to finish.
+[2021-02-22 17:27:49.985] boot -  INFO [Thread-2] --- SimpleMessageListenerContainer:Successfully waited for workers to finish.
+[2021-02-22 17:27:49.987] boot -  INFO [Thread-2] --- SimpleMessageListenerContainer:Waiting for workers to finish.
+[2021-02-22 17:27:50.996] boot -  INFO [Thread-2] --- SimpleMessageListenerContainer:Successfully waited for workers to finish.
+[2021-02-22 17:27:50.998] boot -  INFO [Thread-2] --- SimpleMessageListenerContainer:Shutdown ignored - container is not active already
+[2021-02-22 17:27:50.998] boot -  INFO [Thread-2] --- SimpleMessageListenerContainer:Shutdown ignored - container is not active already
+[2021-02-22 17:27:50.998] boot -  INFO [Thread-2] --- SimpleMessageListenerContainer:Shutdown ignored - container is not active already
+[2021-02-22 17:27:50.998] boot -  INFO [Thread-2] --- SimpleMessageListenerContainer:Shutdown ignored - container is not active already
+[2021-02-22 17:27:50.999] boot -  INFO [Thread-2] --- SimpleMessageListenerContainer:Shutdown ignored - container is not active already
+[2021-02-22 17:27:50.999] boot -  INFO [Thread-2] --- SimpleMessageListenerContainer:Shutdown ignored - container is not active already
+[2021-02-22 17:27:50.999] boot -  INFO [Thread-2] --- SimpleMessageListenerContainer:Shutdown ignored - container is not active already
+[2021-02-22 17:27:50.999] boot -  INFO [Thread-2] --- SimpleMessageListenerContainer:Shutdown ignored - container is not active already
+[2021-02-22 17:27:50.999] boot -  INFO [Thread-2] --- SimpleMessageListenerContainer:Shutdown ignored - container is not active already
+[2021-02-22 17:28:28.821] boot -  INFO [main] --- SpringBootTestContextBootstrapper:Neither @ContextConfiguration nor @ContextHierarchy found for test class [com.wangjunyao.middleware.server.RabbitmqTest], using SpringBootContextLoader
+[2021-02-22 17:28:28.828] boot -  INFO [main] --- AbstractContextLoader:Could not detect default resource locations for test class [com.wangjunyao.middleware.server.RabbitmqTest]: no resource found for suffixes {-context.xml, Context.groovy}.
+[2021-02-22 17:28:29.063] boot -  INFO [main] --- SpringBootTestContextBootstrapper:Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener, org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener]
+[2021-02-22 17:28:29.134] boot -  INFO [main] --- SpringBootTestContextBootstrapper:Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@1060b431, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@612679d6, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener@11758f2a, org.springframework.boot.test.autoconfigure.SpringBootDependencyInjectionTestExecutionListener@e720b71, org.springframework.test.context.support.DirtiesContextTestExecutionListener@1b26f7b2, org.springframework.test.context.transaction.TransactionalTestExecutionListener@491cc5c9, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@74ad1f1f, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener@6a1aab78, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener@462d5aee, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener@69b0fd6f, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener@757942a1, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener@4a87761d]
+[2021-02-22 17:28:30.017] boot -  INFO [main] --- RabbitmqTest:Starting RabbitmqTest on 王俊瑶 with PID 11520 (started by wangjunyao in E:\idea-workspace\middleware\server)
+[2021-02-22 17:28:30.018] boot -  INFO [main] --- RabbitmqTest:No active profile set, falling back to default profiles: default
+[2021-02-22 17:28:30.123] boot -  INFO [main] --- GenericWebApplicationContext:Refreshing org.springframework.web.context.support.GenericWebApplicationContext@2a4fb17b: startup date [Mon Feb 22 17:28:30 CST 2021]; root of context hierarchy
+[2021-02-22 17:28:31.482] boot -  INFO [background-preinit] --- Version:HV000001: Hibernate Validator 5.3.6.Final
+[2021-02-22 17:28:32.259] boot -  INFO [main] --- RepositoryConfigurationDelegate:Multiple Spring Data modules found, entering strict repository configuration mode!
+[2021-02-22 17:28:33.225] boot -  INFO [main] --- PostProcessorRegistrationDelegate$BeanPostProcessorChecker:Bean 'org.springframework.amqp.rabbit.annotation.RabbitBootstrapConfiguration' of type [org.springframework.amqp.rabbit.annotation.RabbitBootstrapConfiguration$$EnhancerBySpringCGLIB$$e22d25fc] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+[2021-02-22 17:28:33.327] boot -  INFO [main] --- PostProcessorRegistrationDelegate$BeanPostProcessorChecker:Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$1bc167ce] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+[2021-02-22 17:28:36.759] boot -  INFO [main] --- RequestMappingHandlerAdapter:Looking for @ControllerAdvice: org.springframework.web.context.support.GenericWebApplicationContext@2a4fb17b: startup date [Mon Feb 22 17:28:30 CST 2021]; root of context hierarchy
+[2021-02-22 17:28:36.964] boot -  INFO [main] --- RequestMappingHandlerMapping:Mapped "{[/book/info],methods=[GET]}" onto public com.wangjunyao.middleware.server.entity.Book com.wangjunyao.middleware.server.controller.BookController.info(java.lang.Integer,java.lang.String)
+[2021-02-22 17:28:36.966] boot -  INFO [main] --- RequestMappingHandlerMapping:Mapped "{[/cache/pass/item/info],methods=[GET]}" onto public java.util.Map<java.lang.String, java.lang.Object> com.wangjunyao.middleware.server.controller.redis.CachePassController.getItem(java.lang.String)
+[2021-02-22 17:28:36.971] boot -  INFO [main] --- RequestMappingHandlerMapping:Mapped "{[/red/packet/hand/out],methods=[POST],consumes=[application/json;charset=UTF-8]}" onto public com.wangjunyao.middleware.api.response.BaseResponse com.wangjunyao.middleware.server.controller.redis.RedPacketController.handOut(com.wangjunyao.middleware.server.dto.RedPacketDto,org.springframework.validation.BindingResult)
+[2021-02-22 17:28:36.972] boot -  INFO [main] --- RequestMappingHandlerMapping:Mapped "{[/red/packet/rob],methods=[GET],consumes=[application/json;charset=UTF-8]}" onto public com.wangjunyao.middleware.api.response.BaseResponse com.wangjunyao.middleware.server.controller.redis.RedPacketController.rob(java.lang.Integer,java.lang.String)
+[2021-02-22 17:28:36.976] boot -  INFO [main] --- RequestMappingHandlerMapping:Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+[2021-02-22 17:28:36.978] boot -  INFO [main] --- RequestMappingHandlerMapping:Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+[2021-02-22 17:28:37.108] boot -  INFO [main] --- SimpleUrlHandlerMapping:Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+[2021-02-22 17:28:37.108] boot -  INFO [main] --- SimpleUrlHandlerMapping:Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+[2021-02-22 17:28:37.200] boot -  INFO [main] --- SimpleUrlHandlerMapping:Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+[2021-02-22 17:28:38.092] boot -  INFO [main] --- DefaultLifecycleProcessor:Starting beans in phase 2147483647
+[2021-02-22 17:28:38.107] boot -  INFO [SimpleAsyncTaskExecutor-1] --- CachingConnectionFactory:Attempting to connect to: [127.0.0.1:5672]
+[2021-02-22 17:28:38.227] boot -  INFO [SimpleAsyncTaskExecutor-1] --- CachingConnectionFactory:Created new connection: rabbitConnectionFactory#740f368:0/SimpleConnection@3a204d5e [delegate=amqp://guest@127.0.0.1:5672/, localPort= 49927]
+[2021-02-22 17:28:38.419] boot -  INFO [main] --- RabbitmqTest:Started RabbitmqTest in 9.045 seconds (JVM running for 10.595)
+[2021-02-22 17:28:38.526] boot -  INFO [main] --- ModelPublisher:消息模型topicExchange - 生产者 - 发送消息：这是TopicExchange消息模型的消息 路由：local.middleware.mq.topic.routing.key
+[2021-02-22 17:28:38.536] boot -  INFO [Thread-2] --- GenericWebApplicationContext:Closing org.springframework.web.context.support.GenericWebApplicationContext@2a4fb17b: startup date [Mon Feb 22 17:28:30 CST 2021]; root of context hierarchy
+[2021-02-22 17:28:38.538] boot -  INFO [Thread-2] --- DefaultLifecycleProcessor:Stopping beans in phase 2147483647
+[2021-02-22 17:28:38.558] boot -  INFO [Thread-2] --- SimpleMessageListenerContainer:Waiting for workers to finish.
+[2021-02-22 17:28:38.565] boot -  WARN [SimpleAsyncTaskExecutor-1] --- Jackson2JsonMessageConverter:Could not convert incoming message with content-type [application/octet-stream], 'json' keyword missing.
+[2021-02-22 17:28:38.573] boot -  INFO [SimpleAsyncTaskExecutor-1] --- ModelConsumer:消息模型topicExchange - * - 消费者 - 监听消费到消息：这是TopicExchange消息模型的消息
+[2021-02-22 17:28:39.372] boot -  INFO [Thread-2] --- SimpleMessageListenerContainer:Successfully waited for workers to finish.
+[2021-02-22 17:28:39.375] boot -  INFO [Thread-2] --- SimpleMessageListenerContainer:Waiting for workers to finish.
+[2021-02-22 17:28:39.385] boot -  INFO [Thread-2] --- SimpleMessageListenerContainer:Successfully waited for workers to finish.
+[2021-02-22 17:28:39.418] boot -  INFO [Thread-2] --- SimpleMessageListenerContainer:Waiting for workers to finish.
+[2021-02-22 17:28:39.856] boot -  INFO [AMQP Connection 127.0.0.1:5672] --- RabbitmqConfig:消息发送成功：correlationData(null), ack(true), cause(null)
+[2021-02-22 17:28:40.399] boot -  INFO [Thread-2] --- SimpleMessageListenerContainer:Successfully waited for workers to finish.
+[2021-02-22 17:28:40.402] boot -  INFO [Thread-2] --- SimpleMessageListenerContainer:Waiting for workers to finish.
+[2021-02-22 17:28:41.400] boot -  INFO [Thread-2] --- SimpleMessageListenerContainer:Successfully waited for workers to finish.
+[2021-02-22 17:28:41.402] boot -  INFO [Thread-2] --- SimpleMessageListenerContainer:Waiting for workers to finish.
+[2021-02-22 17:28:41.417] boot -  INFO [Thread-2] --- SimpleMessageListenerContainer:Successfully waited for workers to finish.
+[2021-02-22 17:28:41.418] boot -  INFO [Thread-2] --- SimpleMessageListenerContainer:Waiting for workers to finish.
+[2021-02-22 17:28:42.427] boot -  INFO [Thread-2] --- SimpleMessageListenerContainer:Successfully waited for workers to finish.
+[2021-02-22 17:28:42.429] boot -  INFO [Thread-2] --- SimpleMessageListenerContainer:Waiting for workers to finish.
+[2021-02-22 17:28:43.431] boot -  INFO [Thread-2] --- SimpleMessageListenerContainer:Successfully waited for workers to finish.
+[2021-02-22 17:28:43.437] boot -  INFO [Thread-2] --- SimpleMessageListenerContainer:Waiting for workers to finish.
+[2021-02-22 17:28:43.447] boot -  INFO [Thread-2] --- SimpleMessageListenerContainer:Successfully waited for workers to finish.
+[2021-02-22 17:28:43.450] boot -  INFO [Thread-2] --- SimpleMessageListenerContainer:Waiting for workers to finish.
+[2021-02-22 17:28:43.607] boot -  INFO [Thread-2] --- SimpleMessageListenerContainer:Successfully waited for workers to finish.
+[2021-02-22 17:28:43.609] boot -  INFO [Thread-2] --- SimpleMessageListenerContainer:Shutdown ignored - container is not active already
+[2021-02-22 17:28:43.609] boot -  INFO [Thread-2] --- SimpleMessageListenerContainer:Shutdown ignored - container is not active already
+[2021-02-22 17:28:43.609] boot -  INFO [Thread-2] --- SimpleMessageListenerContainer:Shutdown ignored - container is not active already
+[2021-02-22 17:28:43.609] boot -  INFO [Thread-2] --- SimpleMessageListenerContainer:Shutdown ignored - container is not active already
+[2021-02-22 17:28:43.609] boot -  INFO [Thread-2] --- SimpleMessageListenerContainer:Shutdown ignored - container is not active already
+[2021-02-22 17:28:43.609] boot -  INFO [Thread-2] --- SimpleMessageListenerContainer:Shutdown ignored - container is not active already
+[2021-02-22 17:28:43.610] boot -  INFO [Thread-2] --- SimpleMessageListenerContainer:Shutdown ignored - container is not active already
+[2021-02-22 17:28:43.610] boot -  INFO [Thread-2] --- SimpleMessageListenerContainer:Shutdown ignored - container is not active already
+[2021-02-22 17:28:43.610] boot -  INFO [Thread-2] --- SimpleMessageListenerContainer:Shutdown ignored - container is not active already

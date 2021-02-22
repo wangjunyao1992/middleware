@@ -15,7 +15,7 @@ import org.springframework.data.redis.serializer.StringRedisSerializer;
  * 避免出现“非业务性”的令人头疼的问题
  */
 @Configuration
-public class CommonConfig {
+public class RedisConfig {
 
     /**
      * redis连接工厂
