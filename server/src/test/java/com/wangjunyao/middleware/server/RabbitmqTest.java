@@ -3,7 +3,10 @@ package com.wangjunyao.middleware.server;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.wangjunyao.middleware.server.entity.EventInfo;
 import com.wangjunyao.middleware.server.entity.Person;
+import com.wangjunyao.middleware.server.rabbitmq.entity.KnowledgeInfo;
 import com.wangjunyao.middleware.server.rabbitmq.publisher.BasicPublisher;
+import com.wangjunyao.middleware.server.rabbitmq.publisher.KnowledgeManualPublisher;
+import com.wangjunyao.middleware.server.rabbitmq.publisher.KnowledgePublisher;
 import com.wangjunyao.middleware.server.rabbitmq.publisher.ModelPublisher;
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -94,6 +97,40 @@ public class RabbitmqTest {
         //modelPublisher.sendMsgTopic(msg, routingKeyOne);
         //modelPublisher.sendMsgTopic(msg, routingKeyTwo);
         modelPublisher.sendMsgTopic(msg, routingKeyThree);
+    }
+
+    @Autowired
+    private KnowledgePublisher knowledgePublisher;
+
+    /**
+     * 单一消费者 - 确认模式为AUTO
+     * @throws Exception
+     */
+    @Test
+    public void test6() throws Exception{
+        KnowledgeInfo info = new KnowledgeInfo();
+        info.setId(10010);
+        info.setCode("auto");
+        info.setMode("基于AUTO的消息确认消费模式");
+        //调用生产者发送消息
+        knowledgePublisher.sendAutoMsg(info);
+    }
+
+    @Autowired
+    private KnowledgeManualPublisher knowledgeManualPublisher;
+
+    /**
+     * 单一消费者 - 确认模式为MANUAL
+     * @throws Exception
+     */
+    @Test
+    public void test7() throws Exception{
+        KnowledgeInfo info = new KnowledgeInfo();
+        info.setId(10011);
+        info.setCode("manual");
+        info.setMode("基于MANUAL的消息确认消费模式");
+        //调用生产者发送消息
+        knowledgeManualPublisher.sendManualMsg(info);
     }
 
 }
